@@ -7,9 +7,11 @@ using namespace std;
 
 //potentials for initializing at y==0
 
-
 double U(double G)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double result = 0.0;
 	switch(U_MODE)
 	{
@@ -26,6 +28,9 @@ double U(double G)
 
 double dUdG(double G)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double result = 0.0;
 	switch(U_MODE)
 	{
@@ -42,6 +47,9 @@ double dUdG(double G)
 
 double d2UdG2(double G)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double result = 0.0;
 	double gG2 = gamma_parameter*G*G;
 	switch(U_MODE)
@@ -59,16 +67,25 @@ double d2UdG2(double G)
 
 double W(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	return ( k * sgn(y) * exp(a*phi) * ( U(G) + 1.0 - a*phi ) );
 }
 
 double dWdphi(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	return ( k * sgn(y) * a * exp(a*phi) * ( U(G) - a*phi ) );
 }
 
 double dWdG(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	return ( k * sgn(y) * exp(a*phi) * dUdG(G) );
 }
 
@@ -79,16 +96,25 @@ double d2Wdphi2(double phi, double G, double y)
 
 double d2WdphidG(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	return ( k * sgn(y) * a * exp(a*phi) * dUdG(G) );
 }
 
 double d2WdG2(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	return ( k * sgn(y) * exp(a*phi) * d2UdG2(G) );
 }
 
 double Vtilde(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double W_local = W(phi, G, y);
 	double dWdphi_local = dWdphi(phi, G, y);
 	double dWdG_local = dWdG(phi, G, y);
@@ -100,6 +126,9 @@ double Vtilde(double phi, double G, double y)
 
 double dVtildedphi(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double W_local = W(phi, G, y);
 	double dWdphi_local = dWdphi(phi, G, y);
 	double dWdG_local = dWdG(phi, G, y);
@@ -114,6 +143,9 @@ double dVtildedphi(double phi, double G, double y)
 
 double dVtildedG(double phi, double G, double y)
 {
+	if (not INCLUDE_SCALARS)
+		return ( 0.0 );
+
 	double W_local = W(phi, G, y);
 	double dWdphi_local = dWdphi(phi, G, y);
 	double dWdG_local = dWdG(phi, G, y);

@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <cmath>
+#include <iostream>
+#include <vector>
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_matrix.h>
 #include <gsl/gsl_odeiv.h>
@@ -8,7 +11,49 @@
 
 using namespace std;
 
+int mode = 1;	//0 - use definite range in y and terminate
+				//1 - just go until the first negative result
+				//for f(y) and determine y_H
+
 void set_initial_conditions(double v[]);
+int func (double y, const double v[], double f[],
+	void *params);
+int jac (double y, const double v[], double *dfdy, 
+	double dfdt[], void *params);
+void run_ode_solver(double y0, double h,
+	vector<double> * ypts, vector<double> * solution);
+double get_yH(vector<double> * ypts, vector<double> * solution);
+
+int main (void)
+{
+	const int nypts = 101;
+	vector<double> ypts, solution;
+	
+	//initialize
+	if (mode == 0)
+	{
+		for (int iy = 0; iy < nypts; ++iy)
+		{
+			ypts.push_back(0.0 + 0.001*double(iy));
+			solution.push_back(0.0);
+		}
+	}
+
+	//solve
+	run_ode_solver(0.0, 1.e-6, &ypts, &solution);
+
+	//output results
+	for (int iy = 0; iy < ypts.size(); ++iy)
+		cout << ypts[iy] << "   " << solution[iy] << endl;
+
+	double yH = get_yH(&ypts, &solution);
+	
+	cout << "y_H = " << yH << endl;
+
+	return 0;
+}
+
+///////////////////////////////////////////////////////////
 
 int func (double y, const double v[], double f[],
    void *params)
@@ -82,7 +127,22 @@ int jac (double y, const double v[], double *dfdy,
 	return GSL_SUCCESS;
 }
 
-int main (void)
+
+void set_initial_conditions(double v[])
+{
+	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
+	v[0] = 0.0;	//phi(y=0) == 0.0
+	v[1] = 0.0;	//G(y=0) == 0.0
+	v[2] = W(v[0], v[1], 0.0);
+	v[3] = 1.0;	//f(y=0) == 1.0, by definition
+	v[4] = 6.0 * dWdphi(v[0], v[1], 0.0);
+	v[5] = 6.0 * dWdG(v[0], v[1], 0.0);
+
+	return;	
+}
+
+void run_ode_solver(double y0, double h,
+	vector<double> * ypts, vector<double> * solution)
 {
 	const gsl_odeiv_step_type * T 
 	 = gsl_odeiv_step_rk8pd;
@@ -97,45 +157,86 @@ int main (void)
 	double mu = 10;
 	gsl_odeiv_system sys = {func, jac, dim, &mu};
 
-	double y = 0.0, y1 = 0.025;
-	double h = 1e-10;
-
-	//set initials conditions
-	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
-	//double v[dim] = { 1.0, 0.3, 0.4, 0.5, 0.6, 0.7 };
 	double v[dim] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
-	set_initial_conditions(v);
 
-	while (y < y1)
+	if (mode == 0)
 	{
-		int status = gsl_odeiv_evolve_apply (e, c, s,
-					                        &sys, 
-					                        &y, y1,
-					                        &h, v);
+		for (int iy = 0; iy < ypts->size(); ++iy)
+		{
+			double y = y0, y1 = ypts->at(iy);
+			double h = 1e-10;
 
-		if (status != GSL_SUCCESS)
-			break;
+			//set initials conditions
+			//variable order: 0-f
+			set_initial_conditions(v);
 
-		//printf ("%.5e %.5e %.5e %.5e %.5e %.5e %.5e\n", y, v[0], v[1], v[2], v[3], v[4], v[5]);
-		printf ("%.5e %.5e\n", y, v[3]);
+			while (y < y1)
+			{
+				int status = gsl_odeiv_evolve_apply (e, c, s,
+									                &sys, 
+									                &y, y1,
+									                &h, v);
+				if (status != GSL_SUCCESS)
+					break;
+			}
+			//printf ("%.5e %.5e\n", y, v[0]);
+			solution->at(iy) = v[3];
+		}
+	}
+	else if (mode == 1)
+	{
+		int count = 0;
+		do
+		{
+			double y = y0, y1 = 0.0 + 0.001*double(count);
+			double h = 1e-10;
+
+			//set initials conditions
+			//variable order: 0-f
+			set_initial_conditions(v);
+
+			while (y < y1)
+			{
+				int status = gsl_odeiv_evolve_apply (e, c, s,
+									                &sys, 
+									                &y, y1,
+									                &h, v);
+				if (status != GSL_SUCCESS)
+					break;
+			}
+			//printf ("%.5e %.5e\n", y, v[0]);
+			ypts->push_back(y1);
+			solution->push_back(v[3]);
+			count++;
+		} while( v[3] >= 0.0 );
 	}
 
 	gsl_odeiv_evolve_free (e);
 	gsl_odeiv_control_free (c);
 	gsl_odeiv_step_free (s);
 
-	return 0;
+	return;
 }
 
-void set_initial_conditions(double v[])
+double get_yH(vector<double> * ypts, vector<double> * solution)
 {
-	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
-	v[0] = 0.0;	//phi(y=0) == 0.0
-	v[1] = 0.0;	//G(y=0) == 0.0
-	v[2] = W(v[0], v[1], 0.0);
-	v[3] = 1.0;	//f(y=0) == 1.0, by definition
-	v[4] = 6.0 * dWdphi(v[0], v[1], 0.0);
-	v[5] = 6.0 * dWdG(v[0], v[1], 0.0);
+	double yH_estimate = 0.0;
+	int size = ypts->size();
 
-	return;	
+	double A0 = solution->at(size-3), A1 = solution->at(size-2), A2 = solution->at(size-1);
+
+	double x0 = ypts->at(size-3);
+	double dx = ypts->at(size-2) - ypts->at(size-3);	//assumed constant
+
+	double num1 = 2.0*(A0-2.0*A1+A2)*x0 + dx*(3.0*A0-4.0*A1+A2);
+	double num2 = dx * sqrt( A0*A0
+					+ (A2-4.0*A1)*(A2-4.0*A1)
+					- 2.0*A0*(4.0*A1+A2) );
+	double den = 2.0*(A0-2.0*A1+A2);
+
+	yH_estimate = ( num1 + num2 ) / den;
+	if ( yH_estimate < x0 || yH_estimate > x0+2.0*dx )
+		yH_estimate = ( num1 - num2 ) / den;
+
+	return ( yH_estimate );
 }
