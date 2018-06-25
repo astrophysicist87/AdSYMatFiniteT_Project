@@ -15,7 +15,7 @@ const double a = 1.0/sqrt(6.0);
 
 inline double Theta(double y)
 {
-	return double( y>0.0 );
+	return double( y>=0.0 );
 }
 
 inline double sgn(double y)

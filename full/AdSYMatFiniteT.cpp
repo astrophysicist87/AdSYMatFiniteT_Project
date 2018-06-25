@@ -22,7 +22,9 @@ int jac (double y, const double v[], double *dfdy,
 	double dfdt[], void *params);
 void run_ode_solver(double y0, double h,
 	vector<double> * ypts, vector<double> * solution);
-double get_yH(vector<double> * ypts, vector<double> * solution);
+double get_yH( vector<double> * ypts,
+				vector<double> * solution,
+				double * f_prime_at_yH_estimate );
 
 int main (void)
 {
@@ -34,21 +36,35 @@ int main (void)
 	{
 		for (int iy = 0; iy < nypts; ++iy)
 		{
-			ypts.push_back(0.0 + 0.001*double(iy));
-			solution.push_back(0.0);
+			ypts.push_back(0.0 + stepsize*double(iy));
+			for (int iv = 0; iv < dim; ++iv)
+				solution.push_back(0.0);
 		}
 	}
 
 	//solve
-	run_ode_solver(0.0, 1.e-6, &ypts, &solution);
+	double y0 = 0.0;
+	double h = 1.e-10;
+	run_ode_solver(y0, h, &ypts, &solution);
 
 	//output results
 	for (int iy = 0; iy < ypts.size(); ++iy)
-		cout << ypts[iy] << "   " << solution[iy] << endl;
+	{
+		cout << ypts[iy];
+		for (int iv = 0; iv < dim; ++iv)
+			cout << "   " << solution[solution_indexer(iy, iv)];
+		cout << endl;
+	}
 
-	double yH = get_yH(&ypts, &solution);
+	if (mode == 1)
+	{
+		double f_prime_at_yH = 0.0;
+		double yH = get_yH(&ypts, &solution, &f_prime_at_yH);
 	
-	cout << "y_H = " << yH << endl;
+		cout << "y_H = " << yH << endl;
+		//cout << "z_H = " << sgn << endl;
+		cout << "f'(y_H) = " << f_prime_at_yH << endl;
+	}
 
 	return 0;
 }
@@ -130,13 +146,28 @@ int jac (double y, const double v[], double *dfdy,
 
 void set_initial_conditions(double v[])
 {
+	//OLD INITIAL CONDITIONS
+	/*
 	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
-	v[0] = 0.0;	//phi(y=0) == 0.0
-	v[1] = 0.0;	//G(y=0) == 0.0
+	v[0] = 0.0;							//phi(y=0) == 0.0
+	v[1] = 0.0;							//G(y=0) == 0.0
 	v[2] = W(v[0], v[1], 0.0);
-	v[3] = 1.0;	//f(y=0) == 1.0, by definition
+	v[3] = 1.0;							//f(y=0) == 1.0, by definition
 	v[4] = 6.0 * dWdphi(v[0], v[1], 0.0);
 	v[5] = 6.0 * dWdG(v[0], v[1], 0.0);
+	*/
+	
+	//NEW INITIAL CONDITIONS
+	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
+	v[0] = sqrt(8.0/3.0)*lambda/(k*k);	//phi(y=0) == sqrt(8./3.)*lambda/k^2
+	v[1] = sqrt(24.0*lambda)/k;			//G(y=0) == sqrt(24.*lambda)/k
+	v[2] = W(v[0], v[1], 0.0);			//B = W
+	v[3] = 1.0;							//f(y=0) == 1.0, by definition
+	v[4] = 2.0*exp(a*v[0])*sqrt_lambda_parameter/k;
+	v[5] = sqrt(24.0)*exp(a*v[0]);
+
+	//for (int i = 0; i < dim; ++i)
+	//	cout << "v[" << i << "] = " << v[i] << endl;
 
 	return;	
 }
@@ -164,7 +195,6 @@ void run_ode_solver(double y0, double h,
 		for (int iy = 0; iy < ypts->size(); ++iy)
 		{
 			double y = y0, y1 = ypts->at(iy);
-			double h = 1e-10;
 
 			//set initials conditions
 			//variable order: 0-f
@@ -178,9 +208,15 @@ void run_ode_solver(double y0, double h,
 									                &h, v);
 				if (status != GSL_SUCCESS)
 					break;
+
+				//printf ("%.5e %.5e %.5e %.5e %.5e %.5e %.5e\n",
+				//		y, v[0], v[1], v[2], v[3], v[4], v[5]);
 			}
-			//printf ("%.5e %.5e\n", y, v[0]);
-			solution->at(iy) = v[3];
+			//printf ("%.5e %.5e %.5e %.5e %.5e %.5e %.5e\n",
+			//		y, v[0], v[1], v[2], v[3], v[4], v[5]);
+
+			for (int iv = 0; iv < dim; ++iv)
+				solution->at(solution_indexer(iy, iv)) = v[iv];
 		}
 	}
 	else if (mode == 1)
@@ -188,8 +224,7 @@ void run_ode_solver(double y0, double h,
 		int count = 0;
 		do
 		{
-			double y = y0, y1 = 0.0 + 0.001*double(count);
-			double h = 1e-10;
+			double y = y0, y1 = 0.0 + stepsize*double(count);
 
 			//set initials conditions
 			//variable order: 0-f
@@ -203,12 +238,17 @@ void run_ode_solver(double y0, double h,
 									                &h, v);
 				if (status != GSL_SUCCESS)
 					break;
+
+				//printf ("%.5e %.5e %.5e %.5e %.5e %.5e %.5e\n",
+				//		y, v[0], v[1], v[2], v[3], v[4], v[5]);
 			}
-			//printf ("%.5e %.5e\n", y, v[0]);
+			//printf ("%.5e %.5e %.5e %.5e %.5e %.5e %.5e\n",
+			//		y, v[0], v[1], v[2], v[3], v[4], v[5]);
 			ypts->push_back(y1);
-			solution->push_back(v[3]);
+			for (int iv = 0; iv < dim; ++iv)
+				solution->push_back(v[iv]);
 			count++;
-		} while( v[3] >= 0.0 );
+		} while( v[3] >= 0.0 );	//termination condition is f(y>yH) < 0.0
 	}
 
 	gsl_odeiv_evolve_free (e);
@@ -218,15 +258,20 @@ void run_ode_solver(double y0, double h,
 	return;
 }
 
-double get_yH(vector<double> * ypts, vector<double> * solution)
+/*double get_yH( vector<double> * ypts,
+				vector<double> * solution,
+				vector<double> * interpolated_results )
 {
 	double yH_estimate = 0.0;
 	int size = ypts->size();
 
-	double A0 = solution->at(size-3), A1 = solution->at(size-2), A2 = solution->at(size-1);
+	double A0 = solution->at(solution_indexer(size-3, 3));
+	double A1 = solution->at(solution_indexer(size-2, 3));
+	double A2 = solution->at(solution_indexer(size-1, 3));	//this is probably nan
 
 	double x0 = ypts->at(size-3);
-	double dx = ypts->at(size-2) - ypts->at(size-3);	//assumed constant
+	double x1 = ypts->at(size-2);
+	double dx = x1 - x0;			//assumed constant
 
 	double num1 = 2.0*(A0-2.0*A1+A2)*x0 + dx*(3.0*A0-4.0*A1+A2);
 	double num2 = dx * sqrt( A0*A0
@@ -238,5 +283,45 @@ double get_yH(vector<double> * ypts, vector<double> * solution)
 	if ( yH_estimate < x0 || yH_estimate > x0+2.0*dx )
 		yH_estimate = ( num1 - num2 ) / den;
 
+	//just do linear interpolation for now
+	for (int iv = 0; iv < dim; ++iv)
+	{
+		int sol1 = solution->at(solution_indexer(size-2, iv));
+		int sol2 = solution->at(solution_indexer(size-1, iv));
+		interpolated_results->at(iv) = sol1 + (yH_estimate - x1)*(sol2-sol1)/dx;
+	}
+
 	return ( yH_estimate );
-}
+}*/
+
+double get_yH( vector<double> * ypts,
+				vector<double> * solution,
+				double * f_prime_at_yH_estimate )
+{
+	double yH_estimate = 0.0;
+	int size = ypts->size();
+
+	double A0 = solution->at(solution_indexer(size-4, 3));
+	double A1 = solution->at(solution_indexer(size-3, 3));
+	double A2 = solution->at(solution_indexer(size-2, 3));
+
+	double x0 = ypts->at(size-4);
+	double x1 = ypts->at(size-3);
+	double dx = x1 - x0;			//assumed constant
+
+	double num1 = 2.0*(A0-2.0*A1+A2)*x0 + dx*(3.0*A0-4.0*A1+A2);
+	double num2 = dx * sqrt( A0*A0
+					+ (A2-4.0*A1)*(A2-4.0*A1)
+					- 2.0*A0*(4.0*A1+A2) );
+	double den = 2.0*(A0-2.0*A1+A2);
+
+	yH_estimate = ( num1 + num2 ) / den;		//choose one quadratic root
+	if ( yH_estimate < x0 || yH_estimate > ypts->at(size-1) )
+		yH_estimate = ( num1 - num2 ) / den;	//or the other quadratic root
+
+	//finally, estimate f'(y_H) < 0
+	(*f_prime_at_yH_estimate)
+		= -0.5 * sqrt( A0*A0 + (A2-4.0*A1)*(A2-4.0*A1) - 2.0*A0*(4.0*A1+A2) ) / dx;
+
+	return ( yH_estimate );
+}

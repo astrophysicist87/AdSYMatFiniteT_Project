@@ -70,7 +70,7 @@ double W(double phi, double G, double y)
 	if (not INCLUDE_SCALARS)
 		return ( 0.0 );
 
-	return ( k * sgn(y) * exp(a*phi) * ( U(G) + 1.0 - a*phi ) );
+	return ( k * sgn(y) * ( exp(a*phi) * ( U(G) + 1.0 - a*phi ) - 1.0 ) );
 }
 
 double dWdphi(double phi, double G, double y)
@@ -119,6 +119,11 @@ double Vtilde(double phi, double G, double y)
 	double dWdphi_local = dWdphi(phi, G, y);
 	double dWdG_local = dWdG(phi, G, y);
 
+	//cout << "Vt(" << phi << ", " << G << ", " << y << ") = " <<
+	//	18.0 * ( dWdphi_local*dWdphi_local + dWdG_local*dWdG_local )
+	//			-12.0 * W_local*W_local
+	//			-24.0*k*W_local*( Theta(y) - Theta(-y) ) << endl;
+
 	return ( 18.0 * ( dWdphi_local*dWdphi_local + dWdG_local*dWdG_local )
 				-12.0 * W_local*W_local
 				-24.0*k*W_local*( Theta(y) - Theta(-y) ) );
@@ -136,6 +141,11 @@ double dVtildedphi(double phi, double G, double y)
 	double d2WdphidG_local = d2WdphidG(phi, G, y);
 	//double d2WdG2_local = d2WdG2(phi, G, y);
 
+	//cout << "dVtildedphi(" << phi << ", " << G << ", " << y << ") = " <<
+	//	36.0 * ( dWdphi_local*d2Wdphi2_local + dWdG_local*d2WdphidG_local )
+	//			-24.0 * W_local*dWdphi_local
+	//			-24.0*k*dWdphi_local*sgn(y) << endl;
+
 	return ( 36.0 * ( dWdphi_local*d2Wdphi2_local + dWdG_local*d2WdphidG_local )
 				-24.0 * W_local*dWdphi_local
 				-24.0*k*dWdphi_local*sgn(y) );
@@ -152,6 +162,11 @@ double dVtildedG(double phi, double G, double y)
 	//double d2Wdphi2_local = d2Wdphi2(phi, G, y);
 	double d2WdphidG_local = d2WdphidG(phi, G, y);
 	double d2WdG2_local = d2WdG2(phi, G, y);
+
+	//cout << "dVtildedG(" << phi << ", " << G << ", " << y << ") = " <<
+	//	36.0 * ( dWdphi_local*d2WdphidG_local + dWdG_local*d2WdG2_local )
+	//			-24.0 * W_local*dWdG_local
+	//			-24.0*k*dWdG_local*sgn(y) << endl;
 
 	return ( 36.0 * ( dWdphi_local*d2WdphidG_local + dWdG_local*d2WdG2_local )
 				-24.0 * W_local*dWdG_local
