@@ -11,11 +11,8 @@
 
 using namespace std;
 
-int mode = 1;	//0 - use definite range in y and terminate
-				//1 - just go until the first negative result
-				//for f(y) and determine y_H
-
-void set_initial_conditions(double v[]);
+//prototypes
+void set_initial_conditions(double v[], double y0);
 int func (double y, const double v[], double f[],
 	void *params);
 int jac (double y, const double v[], double *dfdy, 
@@ -25,7 +22,13 @@ void run_ode_solver(double y0, double h,
 double get_yH( vector<double> * ypts,
 				vector<double> * solution,
 				double * f_prime_at_yH_estimate );
+double get_zH(vector<double> * ypts,
+				vector<double> * solution,
+				double f_prime_at_yH_estimate,
+				double * f_dot_at_zH_estimate);
+double integrate(vector<double> * xpts, vector<double> * fpts);
 
+//main driver
 int main (void)
 {
 	const int nypts = 101;
@@ -36,14 +39,16 @@ int main (void)
 	{
 		for (int iy = 0; iy < nypts; ++iy)
 		{
-			ypts.push_back(0.0 + stepsize*double(iy));
+			//ypts.push_back(0.0 + (1.471981825e-05)*stepsize*double(iy));
+			ypts.push_back(0.0 + 0.01*stepsize*double(iy));
 			for (int iv = 0; iv < dim; ++iv)
 				solution.push_back(0.0);
 		}
 	}
 
 	//solve
-	double y0 = 0.0;
+	//double y0 = 0.0;
+	double y0 = 1.e-10;
 	double h = 1.e-10;
 	run_ode_solver(y0, h, &ypts, &solution);
 
@@ -52,18 +57,39 @@ int main (void)
 	{
 		cout << ypts[iy];
 		for (int iv = 0; iv < dim; ++iv)
-			cout << "   " << solution[solution_indexer(iy, iv)];
-		cout << endl;
+			cout << "   " << solution[solution_indexer(iy, iv)] + double(iv==2)*q;
+		cout << "   "
+				<< Vtilde( solution[solution_indexer(iy, 0)],
+							solution[solution_indexer(iy, 1)],
+							ypts[iy] ) - 12.0*k*k
+				<< "   "
+				<< dVtildedphi( solution[solution_indexer(iy, 0)],
+								solution[solution_indexer(iy, 1)],
+								ypts[iy] )
+				<< "   "
+				<< dVtildedG( solution[solution_indexer(iy, 0)],
+								solution[solution_indexer(iy, 1)],
+								ypts[iy] )
+				<< endl;
 	}
 
-	if (mode == 1)
+	bool verbose = false;
+	if (mode == 1 and verbose)
 	{
 		double f_prime_at_yH = 0.0;
 		double yH = get_yH(&ypts, &solution, &f_prime_at_yH);
-	
+
+		cout << "q = " << q << ", k = " << k << endl;
 		cout << "y_H = " << yH << endl;
 		//cout << "z_H = " << sgn << endl;
 		cout << "f'(y_H) = " << f_prime_at_yH << endl;
+
+		double f_dot_at_zH = 0.0;
+		double zH = get_zH(&ypts, &solution, f_prime_at_yH, &f_dot_at_zH);
+	
+		cout << "z_H = " << zH << endl;
+		cout << "dot f(z_H) = " << f_dot_at_zH
+				<< " ==> T = " << -f_dot_at_zH / (4.0*M_PI) << " MeV" << endl;
 	}
 
 	return 0;
@@ -71,10 +97,51 @@ int main (void)
 
 ///////////////////////////////////////////////////////////
 
+
+
+void set_initial_conditions(double v[], double y0)
+{
+	//OLD INITIAL CONDITIONS
+	/*
+	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
+	v[0] = 0.0;							//phi(y=0) == 0.0
+	v[1] = 0.0;							//G(y=0) == 0.0
+	v[2] = W(v[0], v[1], 0.0);
+	v[3] = 1.0;							//f(y=0) == 1.0, by definition
+	v[4] = 6.0 * dWdphi(v[0], v[1], 0.0);
+	v[5] = 6.0 * dWdG(v[0], v[1], 0.0);
+	*/
+	double phi0 = sqrt(8.0/3.0)*lambda/(k*k);
+	double phiPrime0 = exp(a*phi0)*4.0*sqrt(2.0/3.0)*lambda/k;
+	double zeps = y0 * exp(a*phi0);
+	///*
+	//NEW INITIAL CONDITIONS
+	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
+	v[0] = sqrt(8.0/3.0)*lambda*(zeps + 1.0/k)*(zeps + 1.0/k);
+										//phi(y=0) == sqrt(8./3.)*lambda/k^2
+	v[1] = sqrt(24.0*lambda)*(zeps + 1.0/k);
+										//G(y=0) == sqrt(24.*lambda)/k
+	v[2] = W(v[0], v[1], y0);			//B = W
+	v[3] = 1.0;							//f(y=0) == 1.0, by definition
+	/*MAYBE WRONG*///v[4] = 2.0*exp(a*v[0])*sqrt_lambda_parameter/k;
+	/*MAYBE WRONG*///v[5] = sqrt(24.0)*exp(a*v[0]);
+	v[4] = exp(a*v[0])*(1.0-a*phiPrime0*zeps)*4.0*sqrt(2.0/3.0)*lambda*(zeps + 1.0/k);
+	v[5] = exp(a*v[0])*(1.0-a*phiPrime0*zeps)*sqrt(24.0)*sqrt_lambda_parameter;
+	//*/
+	//for (int i = 0; i < dim; ++i)
+	//	cout << "v[" << i << "] = " << v[i] << endl;
+
+	return;	
+}
+
+
+
+
+
 int func (double y, const double v[], double f[],
    void *params)
 {
-	double Bpq = v[2]+q;
+	double Bpq = v[2]+q*sgn(y);
 	double Vt = Vtilde(v[0], v[1], y);
 	double dVtdphi = dVtildedphi(v[0], v[1], y);
 	double dVtdG = dVtildedG(v[0], v[1], y);
@@ -93,7 +160,7 @@ int func (double y, const double v[], double f[],
 int jac (double y, const double v[], double *dfdy, 
   double dfdt[], void *params)
 {
-	double Bpq = v[2]+q;
+	double Bpq = v[2]+q*sgn(y);
 	double Vt = Vtilde(v[0], v[1], y);
 	double dVtdphi = dVtildedphi(v[0], v[1], y);
 	double dVtdG = dVtildedG(v[0], v[1], y);
@@ -144,39 +211,13 @@ int jac (double y, const double v[], double *dfdy,
 }
 
 
-void set_initial_conditions(double v[])
-{
-	//OLD INITIAL CONDITIONS
-	/*
-	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
-	v[0] = 0.0;							//phi(y=0) == 0.0
-	v[1] = 0.0;							//G(y=0) == 0.0
-	v[2] = W(v[0], v[1], 0.0);
-	v[3] = 1.0;							//f(y=0) == 1.0, by definition
-	v[4] = 6.0 * dWdphi(v[0], v[1], 0.0);
-	v[5] = 6.0 * dWdG(v[0], v[1], 0.0);
-	*/
-	
-	//NEW INITIAL CONDITIONS
-	//variable order: 0-phi, 1-G, 2-B, 3-f, 4-psi, 5-gamma
-	v[0] = sqrt(8.0/3.0)*lambda/(k*k);	//phi(y=0) == sqrt(8./3.)*lambda/k^2
-	v[1] = sqrt(24.0*lambda)/k;			//G(y=0) == sqrt(24.*lambda)/k
-	v[2] = W(v[0], v[1], 0.0);			//B = W
-	v[3] = 1.0;							//f(y=0) == 1.0, by definition
-	v[4] = 2.0*exp(a*v[0])*sqrt_lambda_parameter/k;
-	v[5] = sqrt(24.0)*exp(a*v[0]);
-
-	//for (int i = 0; i < dim; ++i)
-	//	cout << "v[" << i << "] = " << v[i] << endl;
-
-	return;	
-}
-
 void run_ode_solver(double y0, double h,
 	vector<double> * ypts, vector<double> * solution)
 {
 	const gsl_odeiv_step_type * T 
 	 = gsl_odeiv_step_rk8pd;
+	//const gsl_odeiv_step_type * T 
+	// = gsl_odeiv_step_bsimp;
 
 	gsl_odeiv_step * s 
 	 = gsl_odeiv_step_alloc (T, dim);
@@ -198,7 +239,7 @@ void run_ode_solver(double y0, double h,
 
 			//set initials conditions
 			//variable order: 0-f
-			set_initial_conditions(v);
+			set_initial_conditions(v, y0);
 
 			while (y < y1)
 			{
@@ -224,11 +265,10 @@ void run_ode_solver(double y0, double h,
 		int count = 0;
 		do
 		{
-			double y = y0, y1 = 0.0 + stepsize*double(count);
+			double y = y0, y1 = y0 + stepsize*double(count);
 
 			//set initials conditions
-			//variable order: 0-f
-			set_initial_conditions(v);
+			set_initial_conditions(v, y0);
 
 			while (y < y1)
 			{
@@ -323,5 +363,46 @@ double get_yH( vector<double> * ypts,
 	(*f_prime_at_yH_estimate)
 		= -0.5 * sqrt( A0*A0 + (A2-4.0*A1)*(A2-4.0*A1) - 2.0*A0*(4.0*A1+A2) ) / dx;
 
+	//cout << "CHECK: " << (A0 - 2.0*A1 + A2) / (2.0*dx*dx) << endl;
+
 	return ( yH_estimate );
-}
+}
+double get_zH(vector<double> * ypts,
+				vector<double> * solution,
+				double f_prime_at_yH_estimate,
+				double * f_dot_at_zH_estimate)
+{
+	int length = ypts->size();
+	vector<double> integrand(length);
+	double phi_at_H_estimate = solution->at(solution_indexer(length-2, 0));
+	for (int iy = 0; iy < length; ++iy)
+	{
+		double phi = solution->at(solution_indexer(iy, 0));
+		integrand.at(iy) = exp(a*phi);
+	}
+
+	double arg = integrate(ypts, &integrand);
+	double zH_estimate = (exp(q*arg) - 1.0)/q;
+
+	//finally, estimate f'(z_H) < 0
+	(*f_dot_at_zH_estimate)
+		= exp(-a*phi_at_H_estimate)
+			* f_prime_at_yH_estimate
+			/ ( q*zH_estimate + 1.0 );
+
+	return ( zH_estimate );
+}
+//naive trapezoid rule
+double integrate(vector<double> * xpts, vector<double> * fpts)
+{
+	int length = fpts->size();
+	double h = xpts->at(1) - xpts->at(0);	//assume uniform grid
+
+	double result = 0.0;
+	for (int ix = 0; ix < length - 1; ++ix)	//last value is probably NaN, so cut it out
+		result += fpts->at(ix);
+	
+	result = 0.5*h*(2.0*result - fpts->at(0) - fpts->at(length-2));
+
+	return ( result );
+}

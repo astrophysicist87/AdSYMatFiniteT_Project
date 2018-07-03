@@ -15,6 +15,9 @@ double U(double G)
 	double result = 0.0;
 	switch(U_MODE)
 	{
+		case 0:
+			result = G*G/12.0;
+			break;
 		case 1:
 			result = G*G/12.0 + log(1.0 + gamma_parameter*G*G) / (4.0*gamma_parameter);
 			break;
@@ -34,6 +37,9 @@ double dUdG(double G)
 	double result = 0.0;
 	switch(U_MODE)
 	{
+		case 0:
+			result = G/6.0;
+			break;
 		case 1:
 			result = G*(4.0 + gamma_parameter*G*G)/( 6.0*(1.0 + gamma_parameter*G*G) );
 			break;
@@ -54,6 +60,9 @@ double d2UdG2(double G)
 	double gG2 = gamma_parameter*G*G;
 	switch(U_MODE)
 	{
+		case 0:
+			result = 1.0/6.0;
+			break;
 		case 1:
 			result = ( 4.0 + gG2*(gG2-1.0) ) / ( 6.0 * (1.0+gG2) * (1.0+gG2) );
 			break;

@@ -6,7 +6,7 @@
 
 #include "AdSYMatFiniteT.h"
 
-#define U_MODE				1		//which U(G) potential to use
+#define U_MODE				0		//which U(G) potential to use
 #define INCLUDE_SCALARS		true	//whether or not to include phi, G, and B
 
 using namespace std;
