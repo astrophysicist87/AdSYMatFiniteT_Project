@@ -7,7 +7,7 @@ const int mode = 1;	//0 - use definite range in y and terminate
 					//for f(y) and determine y_H
 
 
-const double stepsize = (mode==0) ? 1.0 : 1.e-8;
+const double stepsize = (mode==0) ? 1.0 : 1.e-6;
 
 //const double sqrt_lambda_parameter = 596.6;		//MeV
 const double sqrt_lambda_parameter = 638.5;		//MeV

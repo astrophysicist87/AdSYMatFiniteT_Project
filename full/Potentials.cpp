@@ -128,10 +128,19 @@ double Vtilde(double phi, double G, double y)
 	double dWdphi_local = dWdphi(phi, G, y);
 	double dWdG_local = dWdG(phi, G, y);
 
-	//cout << "Vt(" << phi << ", " << G << ", " << y << ") = " <<
-	//	18.0 * ( dWdphi_local*dWdphi_local + dWdG_local*dWdG_local )
-	//			-12.0 * W_local*W_local
-	//			-24.0*k*W_local*( Theta(y) - Theta(-y) ) << endl;
+	/*cout << "Vt(" << phi << ", " << G << ", " << y << ") = " <<
+		18.0 * ( dWdphi_local*dWdphi_local + dWdG_local*dWdG_local )
+				-12.0 * W_local*W_local
+				-24.0*k*W_local*( Theta(y) - Theta(-y) ) << endl;
+	cout << "Vt[COMP](" << phi << ", " << G << ", " << y << ") = " <<
+		k*k*exp(2.0*a*phi)*( - 12.0*( 1.0 - exp(-2.0*a*phi) )
+								+ 4.0*sqrt(6.0)*phi
+								- 1.5 * phi*phi
+								+ 3.0*sqrt(6.0)*phi*U(G)
+								- 24.0*U(G)
+								- 9.0*U(G)*U(G)
+								+ 18.0*dUdG(G)*dUdG(G)
+								) << endl;*/
 
 	return ( 18.0 * ( dWdphi_local*dWdphi_local + dWdG_local*dWdG_local )
 				-12.0 * W_local*W_local
