@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    181855,       5210]
-NotebookOptionsPosition[    179022,       5124]
-NotebookOutlinePosition[    179389,       5140]
-CellTagsIndexPosition[    179346,       5137]
+NotebookDataLength[    263804,       7398]
+NotebookOptionsPosition[    259861,       7277]
+NotebookOutlinePosition[    260228,       7293]
+CellTagsIndexPosition[    260185,       7290]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3618,7 +3618,8 @@ Cell[BoxData[
    3.743427721233473*^9, 3.743435225359247*^9, 3.743435443525384*^9, 
    3.743435497961025*^9, 3.743506227130777*^9, 3.743506283058033*^9, 
    3.7435332836354103`*^9, {3.7437737956933393`*^9, 3.7437738047660933`*^9}, 
-   3.743773952260316*^9, 3.7437740068533173`*^9, 3.7437768228181877`*^9}],
+   3.743773952260316*^9, 3.7437740068533173`*^9, 3.7437768228181877`*^9, 
+   3.743780192387352*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -3779,7 +3780,8 @@ Cell[BoxData[
    3.743427721233473*^9, 3.743435225359247*^9, 3.743435443525384*^9, 
    3.743435497961025*^9, 3.743506227130777*^9, 3.743506283058033*^9, 
    3.7435332836354103`*^9, {3.7437737956933393`*^9, 3.7437738047660933`*^9}, 
-   3.743773952260316*^9, 3.7437740068533173`*^9, 3.743776824733972*^9}]
+   3.743773952260316*^9, 3.7437740068533173`*^9, 3.7437768228181877`*^9, 
+   3.743780194371324*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3802,9 +3804,9 @@ Cell[BoxData[{
       RowBox[{"\[Phi]", ",", "G"}], "]"}]}]], 
    RowBox[{"(", 
     RowBox[{
-     RowBox[{"%319", "[", 
+     RowBox[{"%458", "[", 
       RowBox[{"[", "1", "]"}], "]"}], "-", 
-     RowBox[{"%319", "[", 
+     RowBox[{"%458", "[", 
       RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -3816,152 +3818,261 @@ Cell[BoxData[{
       RowBox[{"\[Phi]", ",", "G"}], "]"}]}]], 
    RowBox[{"(", 
     RowBox[{
-     RowBox[{"%320", "[", 
+     RowBox[{"%459", "[", 
       RowBox[{"[", "1", "]"}], "]"}], "-", 
-     RowBox[{"%320", "[", 
+     RowBox[{"%459", "[", 
       RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", 
   "FullSimplify"}]}], "Input",
  CellChangeTimes->{{3.74377384560823*^9, 3.743773872127198*^9}, {
   3.7437740445466833`*^9, 3.7437741420137444`*^9}, {3.743776827912953*^9, 
-  3.743776834883024*^9}}],
+  3.743776834883024*^9}, {3.743780206514909*^9, 3.743780214496955*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-    MultilineFunction->None], "[", "G", "]"}], " ", 
-  RowBox[{"(", 
+   RowBox[{"(", 
+    RowBox[{"3", "-", 
+     RowBox[{
+      SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["Btt", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"\[Phi]", ",", "G"}], "]"}], "2"], " ", 
    RowBox[{
+    SuperscriptBox["Btt", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"1", ",", "1"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["Btt", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"1", ",", "0"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+   RowBox[{"(", 
     RowBox[{
-     RowBox[{"-", "\[Phi]"}], " ", 
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-     SuperscriptBox[
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"-", "3"}], "+", 
-       RowBox[{
-        SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-     SuperscriptBox[
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "-", 
-    RowBox[{"\[Phi]", " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+     RowBox[{"-", "\[Phi]"}], "+", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}], "-", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"-", "3"}], "+", 
+      RowBox[{"(", 
        RowBox[{
-        SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          SuperscriptBox[
-           RowBox[{
-            SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-             MultilineFunction->None], "[", "G", "]"}], "2"], "-", 
-          RowBox[{
-           RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-           RowBox[{
-            SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-             MultilineFunction->None], "[", "G", "]"}]}]}], ")"}]}], "+", 
-       RowBox[{
-        SuperscriptBox[
-         RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+        RowBox[{"-", "3"}], "+", 
         RowBox[{
-         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-          MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}]}], 
-   ")"}]}]], "Output",
+         SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+      RowBox[{
+       SuperscriptBox["Btt", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Phi]", ",", "G"}], "]"}]}]}], ")"}], " ", 
+   RowBox[{
+    SuperscriptBox["Btt", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"1", ",", "1"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["Btt", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"0", ",", "1"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Phi]"}], " ", 
+      RowBox[{
+       SuperscriptBox["Btt", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"0", ",", "2"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{
+         SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+      RowBox[{
+       SuperscriptBox["Btt", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "2"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}], "-", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"2", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
  CellChangeTimes->{{3.743773860821759*^9, 3.743773872583522*^9}, 
    3.743774060541492*^9, {3.743774108764185*^9, 3.743774142216095*^9}, 
-   3.74377683549268*^9}],
+   3.74377683549268*^9, {3.743780200689548*^9, 3.7437802153210773`*^9}}],
 
 Cell[BoxData[
  RowBox[{
   FractionBox["1", "4"], " ", 
-  RowBox[{
-   SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-    MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
   RowBox[{"(", 
    RowBox[{
-    RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-     SuperscriptBox[
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}], "2"]}], "-", 
     RowBox[{
-     RowBox[{"(", 
-      RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
        RowBox[{
-        SqrtBox["6"], " ", 
-        SuperscriptBox["G", "2"]}], "+", 
-       RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-     SuperscriptBox[
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}], "3"]}], "+", 
-    RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        SqrtBox["6"], " ", 
-        SuperscriptBox["G", "2"]}], "+", 
-       RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}], " ", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        SuperscriptBox[
-         RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
         RowBox[{
-         SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+         SqrtBox["6"], " ", 
+         SuperscriptBox["G", "2"]}], "+", 
+        RowBox[{"12", " ", "\[Phi]"}]}], ")"}]}], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["Btt", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"0", ",", "1"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Phi]", ",", "G"}], "]"}], "2"], " ", 
+     RowBox[{
+      SuperscriptBox["Btt", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"1", ",", "1"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["Btt", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"0", ",", "1"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
        RowBox[{
-        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
         RowBox[{"(", 
          RowBox[{
-          SuperscriptBox[
-           RowBox[{
-            SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-             MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], "-", 
           RowBox[{
-           RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-           RowBox[{
-            SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-             MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}]}], 
-      ")"}]}]}], ")"}]}]], "Output",
+           SqrtBox["6"], " ", 
+           SuperscriptBox["G", "2"]}], "+", 
+          RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["Btt", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "2"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"\[Phi]", ",", "G"}], "]"}], "-", 
+          RowBox[{
+           SuperscriptBox["Btt", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"2", ",", "0"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"\[Phi]", ",", "G"}], "]"}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["Btt", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"1", ",", "0"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SqrtBox["6"], " ", 
+           SuperscriptBox["G", "2"]}], "+", 
+          RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}]}], "+", 
+       RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
+        RowBox[{
+         SuperscriptBox["Btt", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"2", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"\[Phi]", ",", "G"}], "]"}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
  CellChangeTimes->{{3.743773860821759*^9, 3.743773872583522*^9}, 
    3.743774060541492*^9, {3.743774108764185*^9, 3.743774142216095*^9}, 
-   3.7437768359593287`*^9}]
+   3.74377683549268*^9, {3.743780200689548*^9, 3.743780215889732*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3972,163 +4083,304 @@ Cell[BoxData[{
    RowBox[{"Btt", "[", 
     RowBox[{"\[Phi]_", ",", "G_"}], "]"}], ":=", 
    RowBox[{
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]}]}], 
+    RowBox[{
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], 
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]}], "+", 
+    RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "+", 
+    RowBox[{"\[Delta]\[CapitalBeta]G", "[", "G", "]"}]}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   FractionBox["%322", 
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}]], "\[Equal]", "0"}], "//", 
+  RowBox[{"%464", "\[Equal]", "0"}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   FractionBox["%323", 
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}]], "\[Equal]", "0"}], "//",
-   "FullSimplify"}]}], "Input",
+  RowBox[{"%465", "\[Equal]", "0"}], "//", "FullSimplify"}]}], "Input",
  CellChangeTimes->{{3.743774192447892*^9, 3.743774242434699*^9}, {
    3.7437743013350773`*^9, 3.7437743297213707`*^9}, {3.743774366997365*^9, 
    3.7437743883561687`*^9}, 3.7437744609125977`*^9, {3.743774548951963*^9, 
    3.743774571073064*^9}, {3.743774659823125*^9, 3.743774671859166*^9}, {
    3.743774760600766*^9, 3.743774766790348*^9}, {3.743774868043645*^9, 
-   3.7437748888453903`*^9}, {3.743776841413783*^9, 3.743776844565391*^9}}],
+   3.7437748888453903`*^9}, {3.743776841413783*^9, 3.743776844565391*^9}, {
+   3.7437801066970987`*^9, 3.743780144191988*^9}, {3.743780223762308*^9, 
+   3.7437802508003883`*^9}, {3.743780642483562*^9, 3.743780649036936*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", "3"}], "+", 
-     RowBox[{
-      SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-   SuperscriptBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "\[Equal]", 
-  RowBox[{
-   RowBox[{"\[Phi]", " ", 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-    SuperscriptBox[
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
-   RowBox[{"\[Phi]", " ", 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}]}], "+", 
    RowBox[{
     RowBox[{"(", 
-     RowBox[{
-      RowBox[{"-", "3"}], "+", 
+     RowBox[{"3", "-", 
       RowBox[{
        SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}], "2"]}], "+", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], " ", 
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
       MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
     RowBox[{"(", 
      RowBox[{
       RowBox[{
-       RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+       RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+       RowBox[{
+        SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+        MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Phi]"}], "+", 
+      RowBox[{
        RowBox[{"(", 
         RowBox[{
-         SuperscriptBox[
-          RowBox[{
-           SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-            MultilineFunction->None], "[", "G", "]"}], "2"], "-", 
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{
+          SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
          RowBox[{
           RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
           RowBox[{
-           SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-            MultilineFunction->None], "[", "G", "]"}]}]}], ")"}]}], "+", 
-      RowBox[{
-       SuperscriptBox[
-        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-       RowBox[{
-        SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-         MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], 
-     ")"}]}]}]}]], "Output",
- CellChangeTimes->{{3.743774203212577*^9, 3.743774242997834*^9}, {
-   3.743774305217258*^9, 3.7437743307380733`*^9}, {3.74377437236973*^9, 
-   3.7437743887063513`*^9}, 3.743774461357082*^9, {3.743774554753243*^9, 
-   3.7437745714298143`*^9}, {3.743774664915248*^9, 3.743774672532297*^9}, 
-   3.743774767101076*^9, {3.7437748687594137`*^9, 3.743774889246018*^9}, 
-   3.743776811586424*^9, 3.743776846160604*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{
-      SqrtBox["6"], " ", 
-      SuperscriptBox["G", "2"]}], "+", 
-     RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-   SuperscriptBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], "3"]}], "\[Equal]", 
-  RowBox[{
-   RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-    SuperscriptBox[
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}], "2"]}], "+", 
-   RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+           SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+            MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
+     ")"}]}], "+", 
    RowBox[{
     RowBox[{"(", 
      RowBox[{
       RowBox[{
-       SqrtBox["6"], " ", 
-       SuperscriptBox["G", "2"]}], "+", 
-      RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], " ", 
+       RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+       RowBox[{
+        SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+        MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
     RowBox[{"(", 
      RowBox[{
       RowBox[{
-       SuperscriptBox[
-        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-       RowBox[{
-        SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-         MultilineFunction->None], "[", "G", "]"}]}], "+", 
-      RowBox[{
-       RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+       RowBox[{"-", "\[Phi]"}], " ", 
        RowBox[{"(", 
         RowBox[{
-         SuperscriptBox[
-          RowBox[{
-           SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-            MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], "-", 
          RowBox[{
           RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
           RowBox[{
+           SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "G", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{
+          SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+            MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "G", "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+          RowBox[{
            SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-            MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}]}], 
-     ")"}]}]}]}]], "Output",
+            MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}], "-", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
+     ")"}]}]}], "\[Equal]", "0"}]], "Output",
  CellChangeTimes->{{3.743774203212577*^9, 3.743774242997834*^9}, {
    3.743774305217258*^9, 3.7437743307380733`*^9}, {3.74377437236973*^9, 
    3.7437743887063513`*^9}, 3.743774461357082*^9, {3.743774554753243*^9, 
    3.7437745714298143`*^9}, {3.743774664915248*^9, 3.743774672532297*^9}, 
    3.743774767101076*^9, {3.7437748687594137`*^9, 3.743774889246018*^9}, 
-   3.743776811586424*^9, 3.74377684734347*^9}]
+   3.743776811586424*^9, 3.743776846160604*^9, {3.743780128635949*^9, 
+   3.743780145285944*^9}, {3.743780235034979*^9, 3.7437802525152073`*^9}, 
+   3.743780662706635*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SqrtBox["6"], " ", 
+          SuperscriptBox["G", "2"]}], "+", 
+         RowBox[{"12", " ", "\[Phi]"}]}], ")"}]}], " ", 
+      RowBox[{
+       SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+        MultilineFunction->None], "[", "G", "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+        MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+            MultilineFunction->None], "[", "G", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}]}], ")"}], "2"]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SqrtBox["6"], " ", 
+            SuperscriptBox["G", "2"]}], "+", 
+           RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+              MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+             MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "G", "]"}]}], "-", 
+           RowBox[{
+            RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "G", "]"}], "-", 
+           RowBox[{
+            
+            SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+             
+             MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
+       ")"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SqrtBox["6"], " ", 
+            SuperscriptBox["G", "2"]}], "+", 
+           RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+              MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+             MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}], "+", 
+        RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+           RowBox[{
+            
+            SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+             
+             MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
+       ")"}]}]}], ")"}]}], "\[Equal]", "0"}]], "Output",
+ CellChangeTimes->{{3.743774203212577*^9, 3.743774242997834*^9}, {
+   3.743774305217258*^9, 3.7437743307380733`*^9}, {3.74377437236973*^9, 
+   3.7437743887063513`*^9}, 3.743774461357082*^9, {3.743774554753243*^9, 
+   3.7437745714298143`*^9}, {3.743774664915248*^9, 3.743774672532297*^9}, 
+   3.743774767101076*^9, {3.7437748687594137`*^9, 3.743774889246018*^9}, 
+   3.743776811586424*^9, 3.743776846160604*^9, {3.743780128635949*^9, 
+   3.743780145285944*^9}, {3.743780235034979*^9, 3.7437802525152073`*^9}, 
+   3.743780680550229*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4136,20 +4388,21 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"%325", "[", 
+   RowBox[{"%495", "[", 
     RowBox[{"[", "1", "]"}], "]"}], "-", 
-   RowBox[{"%325", "[", 
+   RowBox[{"%495", "[", 
     RowBox[{"[", "2", "]"}], "]"}]}], "//", "Expand"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"%326", "[", 
+   RowBox[{"%496", "[", 
     RowBox[{"[", "1", "]"}], "]"}], "-", 
-   RowBox[{"%326", "[", 
+   RowBox[{"%496", "[", 
     RowBox[{"[", "2", "]"}], "]"}]}], "//", "Expand"}]}], "Input",
  CellChangeTimes->{{3.7437749822359*^9, 3.7437749959047003`*^9}, {
   3.743776237426114*^9, 3.743776291334873*^9}, {3.743776415812462*^9, 
   3.743776416061368*^9}, {3.743776851637971*^9, 3.743776856600258*^9}, {
-  3.743776913770771*^9, 3.7437770519047623`*^9}}],
+  3.743776913770771*^9, 3.7437770519047623`*^9}, {3.743780279018231*^9, 
+  3.74378028704494*^9}, {3.7437806858010807`*^9, 3.743780693018487*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -4159,7 +4412,7 @@ Cell[BoxData[
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+      MultilineFunction->None], "[", "G", "]"}], "3"], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
@@ -4170,12 +4423,15 @@ Cell[BoxData[
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+      MultilineFunction->None], "[", "G", "]"}], "3"], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
   RowBox[{"\[Phi]", " ", 
    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
@@ -4183,6 +4439,9 @@ Cell[BoxData[
   RowBox[{"3", " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
@@ -4191,13 +4450,125 @@ Cell[BoxData[
    SqrtBox["6"], " ", "\[Phi]", " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "-", 
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"2", " ", 
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"]}], "-", 
+  RowBox[{"\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"6", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"2", " ", 
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "-", 
   RowBox[{"\[Phi]", " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
      MultilineFunction->None], "[", "G", "]"}]}], "-", 
@@ -4205,6 +4576,9 @@ Cell[BoxData[
    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
@@ -4217,7 +4591,91 @@ Cell[BoxData[
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
@@ -4226,6 +4684,9 @@ Cell[BoxData[
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
@@ -4238,66 +4699,471 @@ Cell[BoxData[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["6"], " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}]}]}]], "Output",
  CellChangeTimes->{{3.7437749845100327`*^9, 3.743774996920412*^9}, {
    3.743776242004339*^9, 3.743776291537403*^9}, 3.74377641656737*^9, 
    3.743776806212739*^9, 3.743776857247856*^9, 3.7437769241102877`*^9, {
    3.743776970845771*^9, 3.743777000454885*^9}, {3.743777047891684*^9, 
-   3.743777053249238*^9}}],
+   3.743777053249238*^9}, 3.743780287314518*^9, 3.743780693358636*^9}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{
-   RowBox[{"-", "4"}], " ", "G", " ", "\[Phi]", " ", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "3"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "3"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "3"]}], "+", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{"6", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}], "2"]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
       MultilineFunction->None], "[", "G", "]"}], "2"]}], "+", 
   RowBox[{
-   SqrtBox["6"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
    SuperscriptBox["G", "2"], " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-   SuperscriptBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], "3"]}], "+", 
-  RowBox[{"12", " ", "\[Phi]", " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-   SuperscriptBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], "3"]}], "-", 
-  RowBox[{
-   SqrtBox["6"], " ", 
-   SuperscriptBox["G", "2"], " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "-", 
-  RowBox[{"12", " ", "\[Phi]", " ", 
-   SuperscriptBox[
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"6", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
    RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "-", 
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
   RowBox[{
-   SqrtBox["6"], " ", 
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
    SuperscriptBox["G", "2"], " ", 
    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
    SuperscriptBox[
@@ -4306,9 +5172,12 @@ Cell[BoxData[
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-     MultilineFunction->None], "[", "G", "]"}]}], "-", 
-  RowBox[{"12", " ", "\[Phi]", " ", 
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
@@ -4316,16 +5185,106 @@ Cell[BoxData[
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-     MultilineFunction->None], "[", "G", "]"}]}], "-", 
-  RowBox[{"4", " ", "G", " ", "\[Phi]", " ", 
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
   RowBox[{
-   SqrtBox["6"], " ", 
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
    SuperscriptBox["G", "2"], " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
@@ -4334,9 +5293,12 @@ Cell[BoxData[
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
-  RowBox[{"12", " ", "\[Phi]", " ", 
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
    SuperscriptBox[
     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
@@ -4344,13 +5306,329 @@ Cell[BoxData[
     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
      MultilineFunction->None], "[", "G", "]"}], " ", 
    RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   SuperscriptBox[
+    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+  RowBox[{"G", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SqrtBox[
+    FractionBox["3", "2"]], " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+  RowBox[{"3", " ", "\[Phi]", " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+     MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+   RowBox[{
+    SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
      MultilineFunction->None], "[", "\[Phi]", "]"}]}]}]], "Output",
  CellChangeTimes->{{3.7437749845100327`*^9, 3.743774996920412*^9}, {
    3.743776242004339*^9, 3.743776291537403*^9}, 3.74377641656737*^9, 
    3.743776806212739*^9, 3.743776857247856*^9, 3.7437769241102877`*^9, {
    3.743776970845771*^9, 3.743777000454885*^9}, {3.743777047891684*^9, 
-   3.743777053255666*^9}}]
+   3.743777053249238*^9}, 3.743780287314518*^9, 3.743780693370576*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4358,52 +5636,81 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"Coefficient", "[", 
-   RowBox[{"%340", ",", 
+   RowBox[{"%497", ",", 
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "]"}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Coefficient", "[", 
-   RowBox[{"%340", ",", 
+   RowBox[{"%497", ",", 
     RowBox[{
      SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
       MultilineFunction->None], "[", "G", "]"}]}], "]"}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Coefficient", "[", 
-   RowBox[{"%341", ",", 
+   RowBox[{"%498", ",", 
     RowBox[{
      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "]"}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Coefficient", "[", 
-   RowBox[{"%341", ",", 
+   RowBox[{"%498", ",", 
     RowBox[{
      SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
       MultilineFunction->None], "[", "G", "]"}]}], "]"}], "//", 
   "FullSimplify"}]}], "Input",
- CellChangeTimes->{{3.743777057027011*^9, 3.743777095578147*^9}}],
+ CellChangeTimes->{{3.743777057027011*^9, 3.743777095578147*^9}, {
+  3.743780294617985*^9, 3.7437803032838917`*^9}, {3.74378070731077*^9, 
+  3.743780714557434*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"(", 
-   RowBox[{"3", "-", 
+  RowBox[{"-", 
+   RowBox[{"(", 
     RowBox[{
-     SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-  SuperscriptBox[
-   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-  RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-  RowBox[{
-   SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-    MultilineFunction->None], "[", "\[Phi]", "]"}]}]], "Output",
- CellChangeTimes->{{3.74377705841851*^9, 3.743777096188615*^9}}],
+     RowBox[{"-", "3"}], "+", 
+     RowBox[{
+      SqrtBox["6"], " ", "\[Phi]"}]}], ")"}]}], " ", 
+  RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.74377705841851*^9, 3.743777096188615*^9}, 
+   3.7437803034419937`*^9, 3.743780714880744*^9}],
 
 Cell[BoxData[
  RowBox[{
-  SuperscriptBox[
-   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
+  RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
   RowBox[{"(", 
    RowBox[{
     RowBox[{"-", "\[Phi]"}], "+", 
@@ -4416,14 +5723,25 @@ Cell[BoxData[
      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
      RowBox[{
       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "+", 
+       RowBox[{
+        SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
        MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}]], "Output",\
 
- CellChangeTimes->{{3.74377705841851*^9, 3.743777096191599*^9}}],
+ CellChangeTimes->{{3.74377705841851*^9, 3.743777096188615*^9}, 
+   3.7437803034419937`*^9, 3.743780714953878*^9}],
 
 Cell[BoxData[
  RowBox[{
-  SuperscriptBox[
-   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+  RowBox[{"-", 
+   FractionBox["1", "4"]}], " ", 
+  RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
   RowBox[{"(", 
    RowBox[{
     RowBox[{
@@ -4435,129 +5753,260 @@ Cell[BoxData[
         SqrtBox["6"], " ", 
         SuperscriptBox["G", "2"]}], "+", 
        RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}]}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}]}], ")"}]}]], "Output",
- CellChangeTimes->{{3.74377705841851*^9, 3.743777096194737*^9}}],
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.74377705841851*^9, 3.743777096188615*^9}, 
+   3.7437803034419937`*^9, 3.743780715122017*^9}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"-", 
-   RowBox[{"(", 
+  FractionBox["1", "4"], " ", 
+  RowBox[{"(", 
+   RowBox[{
     RowBox[{
+     SqrtBox["6"], " ", 
+     SuperscriptBox["G", "2"]}], "+", 
+    RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
+  RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
      RowBox[{
-      SqrtBox["6"], " ", 
-      SuperscriptBox["G", "2"]}], "+", 
-     RowBox[{"12", " ", "\[Phi]"}]}], ")"}]}], " ", 
-  RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-  SuperscriptBox[
-   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-  RowBox[{
-   SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-    MultilineFunction->None], "[", "G", "]"}]}]], "Output",
- CellChangeTimes->{{3.74377705841851*^9, 3.743777096197006*^9}}]
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.74377705841851*^9, 3.743777096188615*^9}, 
+   3.7437803034419937`*^9, 3.74378071518561*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
-  FractionBox[
-   RowBox[{
-    RowBox[{"%349", "%340"}], "-", 
-    RowBox[{"%347", "%341"}]}], 
-   RowBox[{"\[Phi]", " ", 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"]}]], "//", 
+  RowBox[{
+   RowBox[{"%499", "%498"}], "-", 
+   RowBox[{"%501", "%497"}]}], "//", 
   "FullSimplify"}], "\[IndentingNewLine]", 
  RowBox[{
-  FractionBox[
-   RowBox[{
-    RowBox[{"%350", "%340"}], "-", 
-    RowBox[{"%348", "%341"}]}], 
-   RowBox[{"\[Phi]", " ", 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"]}]], "//", 
-  "FullSimplify"}]}], "Input",
+  RowBox[{
+   RowBox[{"%500", "%498"}], "-", 
+   RowBox[{"%502", "%497"}]}], "//", "FullSimplify"}]}], "Input",
  CellChangeTimes->{{3.743777215441368*^9, 3.7437773065761833`*^9}, {
   3.743777360893512*^9, 3.743777361094809*^9}, {3.743777396342822*^9, 
   3.7437773965249863`*^9}, {3.7437781685733624`*^9, 3.743778177159129*^9}, {
-  3.74377821685073*^9, 3.7437782450860167`*^9}}],
+  3.74377821685073*^9, 3.7437782450860167`*^9}, {3.743780317017537*^9, 
+  3.743780355497752*^9}, {3.74378072032481*^9, 3.7437807614087667`*^9}, {
+  3.7437807993592453`*^9, 3.7437808094093227`*^9}, {3.743780851816247*^9, 
+  3.7437808982557087`*^9}, {3.7437812845547657`*^9, 3.743781319157741*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"-", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"-", "4"}], " ", "G", " ", "\[Phi]"}], "+", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{
-         SqrtBox["6"], " ", 
-         SuperscriptBox["G", "2"]}], "+", 
-        RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}]}], "+", 
-     RowBox[{"4", " ", "G", " ", 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{"-", "3"}], "+", 
-        RowBox[{
-         SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}], " ", 
+   FractionBox["1", "4"]}], " ", "\[Phi]", " ", 
+  RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
   RowBox[{"(", 
    RowBox[{
     RowBox[{
      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-     SuperscriptBox[
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
-    RowBox[{
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}]}], ")"}]}]], "Output",
- CellChangeTimes->{{3.743777223785762*^9, 3.743777306888463*^9}, 
-   3.743777362008985*^9, 3.743777397503131*^9, 3.743778177565778*^9, 
-   3.743778246039485*^9}],
-
-Cell[BoxData[
- RowBox[{
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
   RowBox[{"(", 
    RowBox[{
     RowBox[{
      RowBox[{"-", "4"}], " ", "G", " ", "\[Phi]"}], "+", 
     RowBox[{
+     SqrtBox["6"], " ", 
+     SuperscriptBox["G", "2"], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{
-        SqrtBox["6"], " ", 
-        SuperscriptBox["G", "2"]}], "+", 
-       RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+    RowBox[{"12", " ", "\[Phi]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
     RowBox[{"4", " ", "G", " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"-", "3"}], "+", 
        RowBox[{
         SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], ")"}], 
+  " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}], " ", 
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+        MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "G", "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "G", "]"}]}], ")"}]}]}], ")"}]}]}],
+    ")"}]}]], "Output",
+ CellChangeTimes->{{3.743777223785762*^9, 3.743777306888463*^9}, 
+   3.743777362008985*^9, 3.743777397503131*^9, 3.743778177565778*^9, 
+   3.743778246039485*^9, {3.743780348777383*^9, 3.743780356265546*^9}, 
+   3.743780756218462*^9, {3.743780797159854*^9, 3.743780809969656*^9}, 
+   3.743780859388299*^9, {3.743780890823124*^9, 3.743780899059979*^9}, {
+   3.743781289662281*^9, 3.743781320293747*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "4"], " ", "\[Phi]", " ", 
+  RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "4"}], " ", "G", " ", "\[Phi]"}], "+", 
+    RowBox[{
+     SqrtBox["6"], " ", 
+     SuperscriptBox["G", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+    RowBox[{"12", " ", "\[Phi]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+    RowBox[{"4", " ", "G", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "+", 
+       RowBox[{
+        SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], ")"}], 
+  " ", 
   RowBox[{"(", 
    RowBox[{
     RowBox[{
@@ -4565,22 +6014,53 @@ Cell[BoxData[
      SuperscriptBox[
       RowBox[{
        SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}], "2"]}], "+", 
-    RowBox[{
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
+        MultilineFunction->None], "[", "G", "]"}], "2"], " ", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], ")"}]}]], "Output",\
-
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
  CellChangeTimes->{{3.743777223785762*^9, 3.743777306888463*^9}, 
    3.743777362008985*^9, 3.743777397503131*^9, 3.743778177565778*^9, 
-   3.743778246073605*^9}]
+   3.743778246039485*^9, {3.743780348777383*^9, 3.743780356265546*^9}, 
+   3.743780756218462*^9, {3.743780797159854*^9, 3.743780809969656*^9}, 
+   3.743780859388299*^9, {3.743780890823124*^9, 3.743780899059979*^9}, {
+   3.743781289662281*^9, 3.743781320998906*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
   RowBox[{
    FractionBox[
@@ -4588,73 +6068,53 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"-", "4"}], " ", "G", " ", "\[Phi]"}], "+", 
      RowBox[{
+      SqrtBox["6"], " ", 
+      SuperscriptBox["G", "2"], " ", 
       RowBox[{"(", 
        RowBox[{
         RowBox[{
-         SqrtBox["6"], " ", 
-         SuperscriptBox["G", "2"]}], "+", 
-        RowBox[{"12", " ", "\[Phi]"}]}], ")"}], " ", 
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}]}], "+", 
+         RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
+     RowBox[{"12", " ", "\[Phi]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+           MultilineFunction->None], "[", "G", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], ")"}]}], "+", 
      RowBox[{"4", " ", "G", " ", 
       RowBox[{"(", 
        RowBox[{
         RowBox[{"-", "3"}], "+", 
         RowBox[{
          SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], " ", 
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], ")"}]}]}], 
     RowBox[{"G", " ", "\[Phi]"}]], "\[Equal]", "0"}], "//", 
-  "Expand"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   FractionBox[
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-      SuperscriptBox[
-       RowBox[{
-        SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-         MultilineFunction->None], "[", "\[Phi]", "]"}], "2"]}], "+", 
-     RowBox[{
-      SuperscriptBox[
-       RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-        MultilineFunction->None], "[", "G", "]"}]}]}], 
-    RowBox[{
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"]}]], 
-   "\[Equal]", "0"}], "//", "FullSimplify"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   FractionBox[
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-      SuperscriptBox[
-       RowBox[{
-        SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-         MultilineFunction->None], "[", "G", "]"}], "2"]}], "+", 
-     RowBox[{
-      SuperscriptBox[
-       RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"], " ", 
-      RowBox[{
-       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-        MultilineFunction->None], "[", "\[Phi]", "]"}]}]}], 
-    RowBox[{
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], " ", 
-     SuperscriptBox[
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"]}]], "\[Equal]", "0"}], 
-  "//", "FullSimplify"}]}], "Input",
+  "Expand"}]], "Input",
  CellChangeTimes->{{3.74377829209093*^9, 3.743778314406742*^9}, {
    3.7437783464585657`*^9, 3.743778383169198*^9}, {3.7437784849674*^9, 
-   3.743778510044373*^9}, 3.7437785589425364`*^9}],
+   3.743778510044373*^9}, 3.7437785589425364`*^9, 3.743780408575934*^9, {
+   3.743780448369399*^9, 3.743780470452869*^9}, {3.743780505891779*^9, 
+   3.743780506587689*^9}, {3.743781364972048*^9, 3.7437814026310253`*^9}, {
+   3.74378147622386*^9, 3.743781479759534*^9}, 3.743781521589548*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4684,51 +6144,35 @@ Cell[BoxData[
      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
      RowBox[{
       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"], "+", 
+   FractionBox[
+    RowBox[{"12", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "G"], "+", 
+   FractionBox[
+    RowBox[{
+     SqrtBox["6"], " ", "G", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "\[Phi]"], "+", 
+   RowBox[{"4", " ", 
+    SqrtBox["6"], " ", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+   FractionBox[
+    RowBox[{"12", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
        MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
   "\[Equal]", "0"}]], "Output",
  CellChangeTimes->{{3.743778308586069*^9, 3.743778314823464*^9}, {
    3.743778353880003*^9, 3.743778383508581*^9}, {3.7437784895906487`*^9, 
-   3.743778510323772*^9}, 3.743778559282909*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   FractionBox[
-    SuperscriptBox[
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-       MultilineFunction->None], "[", "\[Phi]", "]"}], "2"], 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "2"]], "+", 
-   FractionBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]G", "\[Prime]\[Prime]",
-      MultilineFunction->None], "[", "G", "]"}], 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]]}], "\[Equal]", 
-  "0"}]], "Output",
- CellChangeTimes->{{3.743778308586069*^9, 3.743778314823464*^9}, {
-   3.743778353880003*^9, 3.743778383508581*^9}, {3.7437784895906487`*^9, 
-   3.743778510323772*^9}, 3.743778559287628*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   FractionBox[
-    SuperscriptBox[
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}], "2"], 
-    SuperscriptBox[
-     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "2"]], "+", 
-   FractionBox[
-    RowBox[{
-     SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]\[Prime]",
-      MultilineFunction->None], "[", "\[Phi]", "]"}], 
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]]}], "\[Equal]", 
-  "0"}]], "Output",
- CellChangeTimes->{{3.743778308586069*^9, 3.743778314823464*^9}, {
-   3.743778353880003*^9, 3.743778383508581*^9}, {3.7437784895906487`*^9, 
-   3.743778510323772*^9}, 3.743778559291638*^9}]
+   3.743778510323772*^9}, 3.743778559282909*^9, 3.743780409870411*^9, {
+   3.743780462538993*^9, 3.743780470702353*^9}, 3.743780506997572*^9, {
+   3.743781380783862*^9, 3.743781405823395*^9}, 3.74378148013608*^9, 
+   3.743781522246458*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4739,22 +6183,25 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{
      RowBox[{
-      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}], "\[Rule]", 
-      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]}], ",", 
-     RowBox[{
-      RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Rule]", 
       RowBox[{
        RowBox[{"4", " ", 
-        SqrtBox["6"], "  ", 
+        SqrtBox["6"], " ", 
         RowBox[{
-         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+         SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
        FractionBox[
-        RowBox[{"12", "  ", 
+        RowBox[{"12", " ", 
          RowBox[{
-          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
-           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}]}], 
-     ",", 
+          SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"], "-", 
+       "4"}]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}], "\[Rule]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{"12", " ", 
+       RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}]}], ",", 
      RowBox[{
       RowBox[{"\[CapitalPsi]2", "[", "G", "]"}], "\[Rule]", 
       FractionBox[
@@ -4763,16 +6210,6 @@ Cell[BoxData[{
          SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
           MultilineFunction->None], "[", "G", "]"}]}], "G"]}], ",", 
      RowBox[{
-      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Rule]", 
-      RowBox[{"12", " ", 
-       RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}]}], ",", 
-     RowBox[{
-      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}], "\[Rule]", 
-      RowBox[{"G", " ", 
-       RowBox[{
-        SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-         MultilineFunction->None], "[", "G", "]"}]}]}], ",", 
-     RowBox[{
       RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}], "\[Rule]", 
       FractionBox[
        RowBox[{
@@ -4780,126 +6217,75 @@ Cell[BoxData[{
         RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
      ",", 
      RowBox[{
-      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}], "\[Rule]", "2"}], ",", 
-     RowBox[{
-      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Rule]", 
-      RowBox[{"-", "2"}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}], 
-      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}]}], "+", 
-     RowBox[{
-      RowBox[{"\[CapitalPsi]2", "[", "G", "]"}], 
-      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}]}], "+", 
-     RowBox[{
-      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}], 
-      RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}]}], "+", 
-     RowBox[{
-      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}], 
-      RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}]}], "\[Equal]", "0"}], "//.",
-    "rules"}], "//", "Expand"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Equal]", 
-   RowBox[{
-    RowBox[{"A1", " ", 
-     RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}]}], "+", 
-    RowBox[{"A2", " ", 
-     RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}]}]}], "//.", 
-  "rules"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Equal]", 
-   RowBox[{
-    RowBox[{"A3", " ", 
-     RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}]}], "+", 
-    RowBox[{"A4", " ", 
-     RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}]}]}], "//.", 
-  "rules"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[CapitalPsi]3", "[", "G", "]"}], "\[Equal]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"-", "A1"}], " ", 
-     RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "-", 
-    RowBox[{"A3", " ", 
-     RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}]}]}], "//.", 
-  "rules"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[CapitalPsi]4", "[", "G", "]"}], "\[Equal]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"-", "A2"}], " ", 
-     RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "-", 
-    RowBox[{"A4", " ", 
-     RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}]}]}], "//.", 
-  "rules"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"DSolve", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"A1", " ", 
-        RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}]}], "+", 
-       RowBox[{"A2", " ", 
-        RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}]}]}], "//.", 
-     "rules"}], ",", 
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], ",", "\[Phi]"}], 
-   "]"}], "//", "FullSimplify"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"DSolve", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"A3", " ", 
-        RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}]}], "+", 
-       RowBox[{"A4", " ", 
-        RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}]}]}], "//.", 
-     "rules"}], ",", 
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], ",", "\[Phi]"}], 
-   "]"}], "//", "FullSimplify"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"DSolve", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}], "\[Equal]", 
-      RowBox[{
+      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}], "\[Rule]", " ", 
+      RowBox[{"G", " ", 
        RowBox[{
-        RowBox[{"-", "A1"}], " ", 
-        RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "-", 
-       RowBox[{"A3", " ", 
-        RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}]}]}], "//.", "rules"}], 
-    ",", 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], ",", "G"}], "]"}], "//", 
-  "FullSimplify"}], "\[IndentingNewLine]", 
+        SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        SqrtBox["6"], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+       FractionBox[
+        RowBox[{"12", " ", 
+         RowBox[{
+          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}]}], 
+     ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}], "\[Rule]", " ", 
+      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}], "\[Rule]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]5", "[", "G", "]"}], "\[Rule]", " ", 
+      FractionBox[
+       RowBox[{"12", " ", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+          MultilineFunction->None], "[", "G", "]"}]}], "G"]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}], "\[Rule]", 
+      FractionBox["1", "\[Phi]"]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]6", "[", "G", "]"}], "\[Rule]", " ", 
+      RowBox[{
+       SqrtBox["6"], " ", "G", " ", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+         MultilineFunction->None], "[", "G", "]"}]}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"DSolve", "[", 
+  RowBox[{
    RowBox[{
     RowBox[{
      RowBox[{
-      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"-", "A2"}], " ", 
-        RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "-", 
-       RowBox[{"A4", " ", 
-        RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}]}]}], "//.", "rules"}], 
-    ",", 
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], ",", "G"}], "]"}], "//", 
-  "FullSimplify"}]}], "Input",
- CellChangeTimes->{{3.743778747162888*^9, 3.743778847968766*^9}, {
-  3.743778882278919*^9, 3.74377901590171*^9}, {3.743779077859891*^9, 
-  3.74377930438342*^9}, {3.7437796486545973`*^9, 3.7437796630768433`*^9}}],
+      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]5", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]6", "[", "G", "]"}]}]}], "\[Equal]", "0"}], "//.",
+    "rules"}], "//", "Expand"}]}], "Input",
+ CellChangeTimes->{{3.743781408043005*^9, 3.743781441635997*^9}, 
+   3.7437814920619707`*^9, {3.743781529225904*^9, 3.743781534364751*^9}, {
+   3.7437816405788918`*^9, 3.74378184287287*^9}, {3.743781907553184*^9, 
+   3.7437819818491077`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -4929,21 +6315,212 @@ Cell[BoxData[
      RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], " ", 
      RowBox[{
       SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"], "+", 
+   FractionBox[
+    RowBox[{"12", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "G"], "+", 
+   FractionBox[
+    RowBox[{
+     SqrtBox["6"], " ", "G", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "\[Phi]"], "+", 
+   RowBox[{"4", " ", 
+    SqrtBox["6"], " ", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+   FractionBox[
+    RowBox[{"12", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
        MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
   "\[Equal]", "0"}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663494898*^9}],
+ CellChangeTimes->{{3.743781436474186*^9, 3.743781442259239*^9}, 
+   3.743781492880949*^9, {3.743781529509368*^9, 3.743781535735936*^9}, {
+   3.7437816809378242`*^9, 3.74378168483216*^9}, {3.743781737011718*^9, 
+   3.743781787803582*^9}, {3.743781833371243*^9, 3.743781843136286*^9}, {
+   3.743781953935611*^9, 3.743781982172325*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"-", "2"}], "\[Equal]", 
   RowBox[{
-   FractionBox[
+   RowBox[{
     RowBox[{
-     SqrtBox["6"], " ", "A1", " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Phi]"], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]5", "[", "G", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}], 
+      RowBox[{"\[CapitalPsi]6", "[", "G", "]"}]}]}], "\[Equal]", "0"}], "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{
+       RowBox[{"A1", " ", 
+        RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"B1", " ", 
+        RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"C1", " ", 
+        RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{
+       RowBox[{"A2", " ", 
+        RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"B2", " ", 
+        RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"C2", " ", 
+        RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}], "\[Rule]", 
+      RowBox[{
+       RowBox[{"A3", " ", 
+        RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"B3", " ", 
+        RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+       RowBox[{"C3", " ", 
+        RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}]}], "}"}]}], "//",
+   "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.743782028986435*^9, 3.743782106782982*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"A1", " ", 
+       RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+      RowBox[{"A2", " ", 
+       RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+      RowBox[{"A3", " ", 
+       RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+      RowBox[{"\[CapitalPsi]4", "[", "G", "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"B1", " ", 
+       RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+      RowBox[{"B2", " ", 
+       RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+      RowBox[{"B3", " ", 
+       RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+      RowBox[{"\[CapitalPsi]5", "[", "G", "]"}]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"C1", " ", 
+       RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+      RowBox[{"C2", " ", 
+       RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+      RowBox[{"C3", " ", 
+       RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+      RowBox[{"\[CapitalPsi]6", "[", "G", "]"}]}], ")"}]}]}], "\[Equal]", 
+  "0"}]], "Output",
+ CellChangeTimes->{
+  3.743782027008766*^9, 3.7437820582917137`*^9, {3.7437820931003237`*^9, 
+   3.74378210737341*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalPhi]1", "[", "\[Phi]", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"A1", " ", 
+     RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"B1", " ", 
+     RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"C1", " ", 
+     RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}], "//.", 
+  "rules"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalPhi]2", "[", "\[Phi]", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"A2", " ", 
+     RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"B2", " ", 
+     RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"C2", " ", 
+     RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}], "//.", 
+  "rules"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalPhi]3", "[", "\[Phi]", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"A3", " ", 
+     RowBox[{"\[CapitalPhi]4", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"B3", " ", 
+     RowBox[{"\[CapitalPhi]5", "[", "\[Phi]", "]"}]}], "+", 
+    RowBox[{"C3", " ", 
+     RowBox[{"\[CapitalPhi]6", "[", "\[Phi]", "]"}]}]}]}], "//.", 
+  "rules"}]}], "Input",
+ CellChangeTimes->{{3.743782152675289*^9, 3.7437821766934433`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "4"}], "+", 
+   RowBox[{"4", " ", 
+    SqrtBox["6"], " ", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+      MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+   FractionBox[
+    RowBox[{"12", " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
+  "\[Equal]", 
+  RowBox[{"B1", "+", 
+   FractionBox["C1", "\[Phi]"], "+", 
+   RowBox[{"A1", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4", " ", 
+       SqrtBox["6"], " ", 
+       RowBox[{
+        SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+      FractionBox[
+       RowBox[{"12", " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
+     ")"}]}]}]}]], "Output",
+ CellChangeTimes->{{3.743782154328924*^9, 3.743782176991222*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"12", " ", 
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Equal]", 
+  RowBox[{"B2", "+", 
+   FractionBox["C2", "\[Phi]"], "+", 
    RowBox[{"A2", " ", 
     RowBox[{"(", 
      RowBox[{
@@ -4958,21 +6535,18 @@ Cell[BoxData[
          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
      ")"}]}]}]}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663497591*^9}],
+ CellChangeTimes->{{3.743782154328924*^9, 3.7437821769963903`*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"12", " ", 
-   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Equal]", 
-  RowBox[{
-   FractionBox[
-    RowBox[{
-     SqrtBox["6"], " ", "A3", " ", 
-     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Phi]"], "+", 
-   RowBox[{"A4", " ", 
+  FractionBox[
+   RowBox[{
+    SqrtBox["6"], " ", 
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "\[Phi]"], 
+  "\[Equal]", 
+  RowBox[{"B3", "+", 
+   FractionBox["C3", "\[Phi]"], "+", 
+   RowBox[{"A3", " ", 
     RowBox[{"(", 
      RowBox[{
       RowBox[{"4", " ", 
@@ -4986,140 +6560,719 @@ Cell[BoxData[
          SuperscriptBox["\[CapitalBeta]\[Phi]", "\[Prime]",
           MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
      ")"}]}]}]}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.7437796634999657`*^9}],
+ CellChangeTimes->{{3.743782154328924*^9, 3.743782177001122*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"G", " ", 
+  RowBox[{"Solve", "[", 
    RowBox[{
-    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-     MultilineFunction->None], "[", "G", "]"}]}], "\[Equal]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"-", "2"}], " ", "A1"}], "-", 
-   FractionBox[
-    RowBox[{"A3", " ", 
+    RowBox[{"0", "\[Equal]", 
      RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}], "G"]}]}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663502255*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "\[Equal]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"-", "2"}], " ", "A2"}], "-", 
-   FractionBox[
-    RowBox[{"A4", " ", 
-     RowBox[{
-      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
-       MultilineFunction->None], "[", "G", "]"}]}], "G"]}]}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663504449*^9}],
+      RowBox[{"A2", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"%570", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "-", 
+         RowBox[{"%570", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "-", 
+      RowBox[{"A3", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"%569", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "-", 
+         RowBox[{"%569", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}]}]}], ",", 
+    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "]"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.7437822398621893`*^9, 3.743782292670858*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{
     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
-    RowBox[{
-     RowBox[{"-", 
-      FractionBox[
-       RowBox[{
-        RowBox[{"4", " ", "A2"}], "+", 
-        RowBox[{
-         SqrtBox[
-          FractionBox["2", "3"]], " ", "A1", " ", "\[Phi]"}]}], 
-       RowBox[{"A1", " ", 
-        RowBox[{"(", 
-         RowBox[{"A1", "+", 
-          RowBox[{"4", " ", "A2"}]}], ")"}]}]]}], "+", 
+    FractionBox[
      RowBox[{
+      RowBox[{
+       RowBox[{"-", "A3"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"C2", "+", 
+         RowBox[{"B2", " ", "\[Phi]"}]}], ")"}]}], "+", 
+      RowBox[{"A2", " ", 
+       RowBox[{"(", 
+        RowBox[{"C3", "+", 
+         RowBox[{"B3", " ", "\[Phi]"}]}], ")"}]}]}], 
+     RowBox[{
+      RowBox[{
+       SqrtBox["6"], " ", "A2"}], "-", 
+      RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.743782267005062*^9, 3.743782293002783*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]_", "]"}], ":=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "A3"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"C2", "+", 
+        RowBox[{"B2", " ", "\[Phi]"}]}], ")"}]}], "+", 
+     RowBox[{"A2", " ", 
+      RowBox[{"(", 
+       RowBox[{"C3", "+", 
+        RowBox[{"B3", " ", "\[Phi]"}]}], ")"}]}]}], 
+    RowBox[{
+     RowBox[{
+      SqrtBox["6"], " ", "A2"}], "-", 
+     RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tmp", "=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"B3", "\[Rule]", "0"}], ",", 
+      RowBox[{"B2", "\[Rule]", 
+       RowBox[{"2", " ", 
+        SqrtBox["6"], " ", "C3"}]}], ",", 
+      RowBox[{"A3", "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox["1", "4"]}]}], ",", 
+      RowBox[{"A2", "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox["3", "2"]}]}]}], "}"}], "~", "Join", "~", 
+    RowBox[{"{", 
+     RowBox[{"C1", "\[Rule]", "0"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoefficientList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Phi]", " ", 
       SuperscriptBox[
        RowBox[{"(", 
         RowBox[{
-         RowBox[{"-", "3"}], "+", 
          RowBox[{
-          SqrtBox["6"], " ", "\[Phi]"}]}], ")"}], 
-       RowBox[{"-", 
-        FractionBox["A1", 
-         RowBox[{"4", " ", "A2"}]]}]], " ", 
-      RowBox[{"C", "[", "1", "]"}]}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663821628*^9}],
+          SqrtBox["6"], " ", "A2"}], "-", 
+         RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}], ")"}], "2"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"%570", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "-", 
+        RowBox[{"%570", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", "Cancel"}], ",", 
+    "\[Phi]"}], "]"}], "//.", "tmp"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoefficientList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Phi]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SqrtBox["6"], " ", "A2"}], "-", 
+         RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}], ")"}], "2"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"%569", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "-", 
+        RowBox[{"%569", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", "Cancel"}], ",", 
+    "\[Phi]"}], "]"}], "//.", "tmp"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "//.", "tmp"}], "//",
+   "FullSimplify"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tmp", "=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"A3", "\[Rule]", "0"}], ",", 
+      RowBox[{"B3", "\[Rule]", "0"}], ",", 
+      RowBox[{"C2", "\[Rule]", "0"}], ",", 
+      RowBox[{"C3", "\[Rule]", 
+       FractionBox["B2", 
+        RowBox[{"2", " ", 
+         SqrtBox["6"]}]]}]}], "}"}], "~", "Join", "~", 
+    RowBox[{"{", 
+     RowBox[{"C1", "\[Rule]", "0"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoefficientList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Phi]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SqrtBox["6"], " ", "A2"}], "-", 
+         RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}], ")"}], "2"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"%570", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "-", 
+        RowBox[{"%570", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", "Cancel"}], ",", 
+    "\[Phi]"}], "]"}], "//.", "tmp"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoefficientList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Phi]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SqrtBox["6"], " ", "A2"}], "-", 
+         RowBox[{"12", " ", "A3", " ", "\[Phi]"}]}], ")"}], "2"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"%569", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "-", 
+        RowBox[{"%569", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], "//", "Cancel"}], ",", 
+    "\[Phi]"}], "]"}], "//.", "tmp"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "//.", "tmp"}], "//",
+   "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.743782316445775*^9, 3.7437823941427298`*^9}, {
+  3.7437824244482613`*^9, 3.743782431033333*^9}, {3.7437825310676727`*^9, 
+  3.7437826573216143`*^9}, {3.743782837758466*^9, 3.743782922835539*^9}, {
+  3.743784664769149*^9, 3.743784678293235*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.743784679392085*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.7437846793950043`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["C3", 
+   SqrtBox["6"]], "-", 
+  FractionBox["C2", 
+   RowBox[{"6", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SqrtBox["6"], "-", 
+      RowBox[{"2", " ", "\[Phi]"}]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.7437846795758963`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.743784679578805*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.743784679581441*^9}],
+
+Cell[BoxData[
+ FractionBox["B2", "12"]], "Output",
+ CellChangeTimes->{{3.743782330915772*^9, 3.743782394469307*^9}, 
+   3.743782447743423*^9, {3.74378253575485*^9, 3.74378265764321*^9}, {
+   3.743782845975049*^9, 3.743782923217915*^9}, 3.743784679584036*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"A1", " ", 
+      RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+     RowBox[{"A2", " ", 
+      RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+     RowBox[{"A3", " ", 
+      RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+     RowBox[{"\[CapitalPsi]4", "[", "G", "]"}]}], "\[Equal]", "0"}], "//.", 
+   "rules"}], "//", "Expand"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["G", "3"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"B1", " ", 
+        RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+       RowBox[{"B2", " ", 
+        RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+       RowBox[{"B3", " ", 
+        RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+       RowBox[{"\[CapitalPsi]5", "[", "G", "]"}]}], ")"}]}], "\[Equal]", 
+    "0"}], "//.", "rules"}], "//", "Expand"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", 
+     SqrtBox["6"], "G", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"C1", " ", 
+        RowBox[{"\[CapitalPsi]1", "[", "G", "]"}]}], "+", 
+       RowBox[{"C2", " ", 
+        RowBox[{"\[CapitalPsi]2", "[", "G", "]"}]}], "+", 
+       RowBox[{"C3", " ", 
+        RowBox[{"\[CapitalPsi]3", "[", "G", "]"}]}], "+", 
+       RowBox[{"\[CapitalPsi]6", "[", "G", "]"}]}], ")"}]}], "\[Equal]", 
+    "0"}], "//.", "rules"}], "//", "Expand"}]}], "Input",
+ CellChangeTimes->{{3.7437829671326723`*^9, 3.743783002575572*^9}, {
+  3.743783056207177*^9, 3.743783087075403*^9}, {3.743783222290429*^9, 
+  3.743783230089513*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A1", "+", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "+", 
+   FractionBox[
+    RowBox[{"A2", " ", 
+     RowBox[{
+      SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+       MultilineFunction->None], "[", "G", "]"}]}], "G"], "+", 
+   RowBox[{"A3", " ", "G", " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}]}], "\[Equal]", 
+  "0"}]], "Output",
+ CellChangeTimes->{{3.743782997762808*^9, 3.7437830030063868`*^9}, {
+  3.7437830611598177`*^9, 3.7437830881836233`*^9}, {3.743783223305953*^9, 
+  3.7437832303216467`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"B1", " ", 
+    SuperscriptBox["G", "3"]}], "+", 
+   RowBox[{"B2", " ", 
+    SuperscriptBox["G", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], "+", 
+   RowBox[{"B3", " ", 
+    SuperscriptBox["G", "4"], " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], "+", 
+   RowBox[{"12", " ", 
+    SuperscriptBox["G", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}]}], "\[Equal]", 
+  "0"}]], "Output",
+ CellChangeTimes->{{3.743782997762808*^9, 3.7437830030063868`*^9}, {
+  3.7437830611598177`*^9, 3.7437830881836233`*^9}, {3.743783223305953*^9, 
+  3.7437832303282967`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"2", " ", 
+    SqrtBox["6"], " ", "C1", " ", "G"}], "+", 
+   RowBox[{"2", " ", 
+    SqrtBox["6"], " ", "C2", " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], "+", 
+   RowBox[{"2", " ", 
+    SqrtBox["6"], " ", "C3", " ", 
+    SuperscriptBox["G", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}], "+", 
+   RowBox[{"12", " ", 
+    SuperscriptBox["G", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["\[Delta]\[CapitalBeta]G", "\[Prime]",
+      MultilineFunction->None], "[", "G", "]"}]}]}], "\[Equal]", 
+  "0"}]], "Output",
+ CellChangeTimes->{{3.743782997762808*^9, 3.7437830030063868`*^9}, {
+  3.7437830611598177`*^9, 3.7437830881836233`*^9}, {3.743783223305953*^9, 
+  3.743783230334403*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tmp2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"C1", "\[Rule]", "0"}], ",", 
+     RowBox[{"B2", "\[Rule]", 
+      RowBox[{"2", " ", 
+       SqrtBox["6"], " ", "C3"}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B3", " ", 
+   SuperscriptBox["G", "3"], 
+   RowBox[{"%697", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], "//", "Expand"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"A3", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"%698", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "-", 
+      RowBox[{"%699", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], "//.", "tmp2"}], "//", 
+  "Expand"}]}], "Input",
+ CellChangeTimes->{{3.743783098552693*^9, 3.74378314917762*^9}, {
+  3.74378321445858*^9, 3.743783282056274*^9}, {3.743783689099843*^9, 
+  3.7437837752160597`*^9}, {3.743783870426038*^9, 3.743783960058776*^9}, {
+  3.743784226711877*^9, 3.743784232351386*^9}, {3.743784317582342*^9, 
+  3.743784330379632*^9}, {3.7437844912664557`*^9, 3.7437845894729958`*^9}, {
+  3.7437848327937326`*^9, 3.7437848330792418`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A1", " ", "B3", " ", 
+   SuperscriptBox["G", "3"]}], "+", 
+  RowBox[{"B3", " ", 
+   SuperscriptBox["G", "3"], " ", 
+   RowBox[{"\[CapitalBeta]G", "[", "G", "]"}]}], "+", 
+  RowBox[{"A2", " ", "B3", " ", 
+   SuperscriptBox["G", "2"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"A3", " ", "B3", " ", 
+   SuperscriptBox["G", "4"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}]}]], "Output",
+ CellChangeTimes->{{3.743783113024375*^9, 3.743783149513183*^9}, 
+   3.7437832436523857`*^9, 3.743783282298896*^9, 3.743783676492116*^9, {
+   3.743783711434573*^9, 3.743783775411688*^9}, {3.743783871075108*^9, 
+   3.7437839608931837`*^9}, 3.74378424496523*^9, {3.743784317982686*^9, 
+   3.743784331087294*^9}, {3.74378449670201*^9, 3.743784526066028*^9}, {
+   3.743784580445221*^9, 3.743784589804525*^9}, 3.743784833732354*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A3", " ", "B1", " ", 
+   SuperscriptBox["G", "3"]}], "-", 
+  RowBox[{"2", " ", 
+   SqrtBox["6"], " ", "A3", " ", "C2", " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}], "+", 
+  RowBox[{"A3", " ", "B3", " ", 
+   SuperscriptBox["G", "4"], " ", 
+   RowBox[{
+    SuperscriptBox["\[CapitalBeta]G", "\[Prime]",
+     MultilineFunction->None], "[", "G", "]"}]}]}]], "Output",
+ CellChangeTimes->{{3.743783113024375*^9, 3.743783149513183*^9}, 
+   3.7437832436523857`*^9, 3.743783282298896*^9, 3.743783676492116*^9, {
+   3.743783711434573*^9, 3.743783775411688*^9}, {3.743783871075108*^9, 
+   3.7437839608931837`*^9}, 3.74378424496523*^9, {3.743784317982686*^9, 
+   3.743784331087294*^9}, {3.74378449670201*^9, 3.743784526066028*^9}, {
+   3.743784580445221*^9, 3.743784589804525*^9}, 3.743784833738761*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "4"}], "+", 
+     RowBox[{"4", " ", 
+      SqrtBox["6"], " ", 
+      RowBox[{
+       SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+        MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+     FractionBox[
+      RowBox[{"12", " ", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
+    "\[Equal]", "B1"}], ",", 
+   RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], ",", 
+   "\[Phi]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.743784770239595*^9, 3.743784780325385*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{
-    RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
+    RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
     RowBox[{
-     SuperscriptBox["\[ExponentialE]", 
-      FractionBox[
+     RowBox[{"C", "[", "1", "]"}], "+", 
+     RowBox[{
+      FractionBox["1", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{"4", "+", "B1"}], ")"}], " ", 
+      RowBox[{"(", 
        RowBox[{
-        RowBox[{"2", " ", 
-         SqrtBox["6"], " ", "\[Phi]"}], "-", 
+        FractionBox["\[Phi]", 
+         SqrtBox["6"]], "+", 
         RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"-", "6"}], "+", "A3"}], ")"}], " ", 
+         FractionBox["1", "2"], " ", 
          RowBox[{"Log", "[", 
           RowBox[{
-           SqrtBox["6"], "-", 
-           RowBox[{"2", " ", "\[Phi]"}]}], "]"}]}]}], 
-       RowBox[{"4", " ", "A4"}]]], " ", 
-     RowBox[{"C", "[", "1", "]"}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.7437796639805727`*^9}],
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{
+            SqrtBox["6"], " ", "\[Phi]"}]}], "]"}]}]}], ")"}]}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7437847809738827`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"%568", ",", "%569"}], "}"}], "//.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"A3", "\[Rule]", "0"}], ",", 
+       RowBox[{"B3", "\[Rule]", "0"}], ",", 
+       RowBox[{"C2", "\[Rule]", "0"}], ",", 
+       RowBox[{"C3", "\[Rule]", 
+        FractionBox["B2", 
+         RowBox[{"2", " ", 
+          SqrtBox["6"]}]]}], ",", 
+       RowBox[{"C1", "\[Rule]", "0"}], ",", 
+       RowBox[{"B1", "\[Rule]", "0"}]}], "}"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], ",", 
+      RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}]}], "}"}], 
+    ",", "\[Phi]"}], "]"}], "/.", 
+  RowBox[{
+   RowBox[{"C", "[", "1", "]"}], "\[Rule]", "0"}]}], "\[IndentingNewLine]", 
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "4"}], "+", 
+      RowBox[{"4", " ", 
+       SqrtBox["6"], " ", 
+       RowBox[{
+        SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+         MultilineFunction->None], "[", "\[Phi]", "]"}]}], "-", 
+      FractionBox[
+       RowBox[{"12", " ", 
+        RowBox[{
+         SuperscriptBox["\[Delta]\[CapitalBeta]\[Phi]", "\[Prime]",
+          MultilineFunction->None], "[", "\[Phi]", "]"}]}], "\[Phi]"]}], 
+     "\[Equal]", "0"}], "//.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"A3", "\[Rule]", "0"}], ",", 
+      RowBox[{"B3", "\[Rule]", "0"}], ",", 
+      RowBox[{"C2", "\[Rule]", "0"}], ",", 
+      RowBox[{"C3", "\[Rule]", 
+       FractionBox["B2", 
+        RowBox[{"2", " ", 
+         SqrtBox["6"]}]]}], ",", 
+      RowBox[{"C1", "\[Rule]", "0"}], ",", 
+      RowBox[{"B1", "\[Rule]", "0"}]}], "}"}]}], ",", 
+   RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], ",", 
+   "\[Phi]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"%697", ",", "%698"}], "}"}], "//.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"A3", "\[Rule]", "0"}], ",", 
+      RowBox[{"B3", "\[Rule]", "0"}], ",", 
+      RowBox[{"C2", "\[Rule]", "0"}], ",", 
+      RowBox[{"C3", "\[Rule]", 
+       FractionBox["B2", 
+        RowBox[{"2", " ", 
+         SqrtBox["6"]}]]}], ",", 
+      RowBox[{"C1", "\[Rule]", "0"}], ",", 
+      RowBox[{"B1", "\[Rule]", "0"}]}], "}"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], ",", 
+     RowBox[{"\[Delta]\[CapitalBeta]G", "[", "G", "]"}]}], "}"}], ",", "G"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"%697", ",", "%699"}], "}"}], "//.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"A3", "\[Rule]", "0"}], ",", 
+      RowBox[{"B3", "\[Rule]", "0"}], ",", 
+      RowBox[{"C2", "\[Rule]", "0"}], ",", 
+      RowBox[{"C3", "\[Rule]", 
+       FractionBox["B2", 
+        RowBox[{"2", " ", 
+         SqrtBox["6"]}]]}], ",", 
+      RowBox[{"C1", "\[Rule]", "0"}], ",", 
+      RowBox[{"B1", "\[Rule]", "0"}]}], "}"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], ",", 
+     RowBox[{"\[Delta]\[CapitalBeta]G", "[", "G", "]"}]}], "}"}], ",", "G"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.743784871768175*^9, 3.743784880976519*^9}, {
+  3.743784918138679*^9, 3.7437849279371347`*^9}, {3.743785240851325*^9, 
+  3.743785309446169*^9}, {3.743785362146639*^9, 3.74378539663831*^9}, {
+  3.743785565864538*^9, 3.743785569419075*^9}, {3.743785609844949*^9, 
+  3.743785621094473*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
     RowBox[{
-     RowBox[{"C", "[", "1", "]"}], "-", 
-     RowBox[{"A1", " ", 
+     RowBox[{"\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
+     FractionBox["B2", "12"]}], ",", 
+    RowBox[{
+     RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
+     
+     RowBox[{
+      RowBox[{"C", "[", "2", "]"}], "+", 
+      RowBox[{
+       FractionBox["1", "12"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"A1", " ", "B2"}], "+", 
+         RowBox[{"2", " ", 
+          SqrtBox["6"], " ", "\[Phi]"}], "+", 
+         RowBox[{"6", " ", 
+          RowBox[{"Log", "[", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{
+             SqrtBox["6"], " ", "\[Phi]"}]}], "]"}]}]}], ")"}]}]}]}]}], "}"}],
+   "}"}]], "Output",
+ CellChangeTimes->{
+  3.74378488197814*^9, 3.7437849285844803`*^9, {3.743785271941163*^9, 
+   3.74378531029347*^9}, 3.743785397328556*^9, 3.743785570309073*^9, {
+   3.743785615642231*^9, 3.7437856217602987`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\[Delta]\[CapitalBeta]\[Phi]", "[", "\[Phi]", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["\[Phi]", 
+      SqrtBox["6"]], "+", 
+     RowBox[{"C", "[", "1", "]"}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
       RowBox[{"Log", "[", 
-       RowBox[{"A3", "+", 
-        SuperscriptBox["G", "2"]}], "]"}]}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779663993341*^9}],
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{
+         SqrtBox["6"], " ", "\[Phi]"}]}], "]"}]}]}]}], "}"}], "}"}]], "Output",\
+
+ CellChangeTimes->{
+  3.74378488197814*^9, 3.7437849285844803`*^9, {3.743785271941163*^9, 
+   3.74378531029347*^9}, 3.743785397328556*^9, 3.743785570309073*^9, {
+   3.743785615642231*^9, 3.743785621791114*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{
-    RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
     RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
      RowBox[{
-      RowBox[{"-", "2"}], " ", "A2"}], "+", 
+      RowBox[{"-", "A1"}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          SuperscriptBox["G", "2"], 
+          RowBox[{"2", " ", "A2"}]]}]], " ", 
+       RowBox[{"C", "[", "1", "]"}]}]}]}], ",", 
+    RowBox[{
+     RowBox[{"\[Delta]\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
      RowBox[{
-      SuperscriptBox["\[ExponentialE]", 
-       RowBox[{"-", 
-        FractionBox[
-         SuperscriptBox["G", "2"], 
-         RowBox[{"2", " ", "A4"}]]}]], " ", 
-      RowBox[{"C", "[", "1", "]"}]}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{{3.743778770982802*^9, 3.743778781676091*^9}, {
-   3.7437789785685043`*^9, 3.7437790168644943`*^9}, {3.743779130587995*^9, 
-   3.7437791680921297`*^9}, 3.743779199922305*^9, 3.743779252817811*^9, 
-   3.7437793059372396`*^9, 3.743779664040674*^9}]
+      FractionBox[
+       RowBox[{"A1", " ", "B2"}], "12"], "-", 
+      RowBox[{
+       FractionBox["1", "12"], " ", "B2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          SuperscriptBox["G", "2"], 
+          RowBox[{"2", " ", "A2"}]]}]], " ", 
+       RowBox[{"C", "[", "1", "]"}]}], "+", 
+      RowBox[{"C", "[", "2", "]"}]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.74378488197814*^9, 3.7437849285844803`*^9, {3.743785271941163*^9, 
+   3.74378531029347*^9}, 3.743785397328556*^9, 3.743785570309073*^9, {
+   3.743785615642231*^9, 3.7437856217950087`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "A1"}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          SuperscriptBox["G", "2"], 
+          RowBox[{"2", " ", "A2"}]]}]], " ", 
+       RowBox[{"C", "[", "1", "]"}]}]}]}], ",", 
+    RowBox[{
+     RowBox[{"\[Delta]\[CapitalBeta]G", "[", "G", "]"}], "\[Rule]", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"A1", " ", "B2"}], "12"], "-", 
+      RowBox[{
+       FractionBox["1", "12"], " ", "B2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          SuperscriptBox["G", "2"], 
+          RowBox[{"2", " ", "A2"}]]}]], " ", 
+       RowBox[{"C", "[", "1", "]"}]}], "+", 
+      RowBox[{"C", "[", "2", "]"}]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.74378488197814*^9, 3.7437849285844803`*^9, {3.743785271941163*^9, 
+   3.74378531029347*^9}, 3.743785397328556*^9, 3.743785570309073*^9, {
+   3.743785615642231*^9, 3.743785621799095*^9}}]
 }, Open  ]]
 },
 WindowSize->{2389, 1499},
@@ -5164,53 +7317,88 @@ Cell[110605, 3124, 825, 21, 124, "Output"]
 Cell[111445, 3148, 125, 2, 89, "Input"],
 Cell[CellGroupData[{
 Cell[111595, 3154, 9884, 313, 496, "Input"],
-Cell[121482, 3469, 4773, 151, 185, "Output"],
-Cell[126258, 3622, 5011, 159, 193, "Output"]
+Cell[121482, 3469, 4799, 152, 185, "Output"],
+Cell[126284, 3623, 5039, 160, 193, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[131306, 3786, 1234, 39, 168, "Input"],
-Cell[132543, 3827, 2450, 66, 99, "Output"],
-Cell[134996, 3895, 2588, 68, 168, "Output"]
+Cell[131360, 3788, 1280, 39, 168, "Input"],
+Cell[132643, 3829, 3244, 114, 147, "Output"],
+Cell[135890, 3945, 3980, 129, 168, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[137621, 3968, 1161, 28, 257, "Input"],
-Cell[138785, 3998, 2482, 64, 99, "Output"],
-Cell[141270, 4064, 2590, 66, 99, "Output"]
+Cell[139907, 4079, 1187, 24, 168, "Input"],
+Cell[141097, 4105, 5072, 129, 147, "Output"],
+Cell[146172, 4236, 5920, 146, 216, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[143897, 4135, 648, 16, 129, "Input"],
-Cell[144548, 4153, 3885, 96, 138, "Output"],
-Cell[148436, 4251, 4028, 101, 181, "Output"]
+Cell[152129, 4387, 744, 17, 129, "Input"],
+Cell[152876, 4406, 23731, 579, 568, "Output"],
+Cell[176610, 4987, 25737, 643, 1426, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[152501, 4357, 1075, 29, 207, "Input"],
-Cell[153579, 4388, 459, 12, 99, "Output"],
-Cell[154041, 4402, 595, 18, 99, "Output"],
-Cell[154639, 4422, 655, 19, 99, "Output"],
-Cell[155297, 4443, 526, 15, 99, "Output"]
+Cell[202384, 5635, 1174, 31, 207, "Input"],
+Cell[203561, 5668, 1084, 30, 99, "Output"],
+Cell[204648, 5700, 1278, 37, 99, "Output"],
+Cell[205929, 5739, 1315, 37, 118, "Output"],
+Cell[207247, 5778, 1134, 31, 118, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[155860, 4463, 801, 22, 219, "Input"],
-Cell[156664, 4487, 1584, 44, 99, "Output"],
-Cell[158251, 4533, 1543, 44, 99, "Output"]
+Cell[208418, 5814, 788, 16, 129, "Input"],
+Cell[209209, 5832, 4492, 116, 165, "Output"],
+Cell[213704, 5950, 4152, 107, 165, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[159831, 4582, 2679, 74, 345, "Input"],
-Cell[162513, 4658, 1252, 32, 132, "Output"],
-Cell[163768, 4692, 707, 18, 130, "Output"],
-Cell[164478, 4712, 707, 18, 130, "Output"]
+Cell[217893, 6062, 2176, 54, 153, "Input"],
+Cell[220072, 6118, 2206, 56, 132, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[165222, 4735, 5923, 166, 557, "Input"],
-Cell[171148, 4903, 1328, 33, 132, "Output"],
-Cell[172479, 4938, 951, 25, 132, "Output"],
-Cell[173433, 4965, 1012, 26, 132, "Output"],
-Cell[174448, 4993, 680, 17, 119, "Output"],
-Cell[175131, 5012, 593, 14, 119, "Output"],
-Cell[175727, 5028, 1071, 31, 178, "Output"],
-Cell[176801, 5061, 911, 24, 124, "Output"],
-Cell[177715, 5087, 589, 14, 94, "Output"],
-Cell[178307, 5103, 699, 18, 118, "Output"]
+Cell[222315, 6179, 4159, 108, 273, "Input"],
+Cell[226477, 6289, 2160, 55, 132, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[228674, 6349, 2092, 53, 129, "Input"],
+Cell[230769, 6404, 1443, 39, 89, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[232249, 6448, 1254, 34, 168, "Input"],
+Cell[233506, 6484, 1052, 31, 123, "Output"],
+Cell[234561, 6517, 718, 20, 123, "Output"],
+Cell[235282, 6539, 760, 23, 132, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[236079, 6567, 736, 22, 89, "Input"],
+Cell[236818, 6591, 654, 20, 130, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[237509, 6616, 4358, 136, 645, "Input"],
+Cell[241870, 6754, 301, 5, 89, "Output"],
+Cell[242174, 6761, 303, 5, 89, "Output"],
+Cell[242480, 6768, 440, 12, 137, "Output"],
+Cell[242923, 6782, 301, 5, 89, "Output"],
+Cell[243227, 6789, 301, 5, 89, "Output"],
+Cell[243531, 6796, 258, 4, 118, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[243826, 6805, 1620, 45, 176, "Input"],
+Cell[245449, 6852, 623, 16, 119, "Output"],
+Cell[246075, 6870, 844, 23, 89, "Output"],
+Cell[246922, 6895, 882, 24, 94, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[247841, 6924, 1104, 29, 188, "Input"],
+Cell[248948, 6955, 1012, 22, 89, "Output"],
+Cell[249963, 6979, 898, 19, 94, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[250898, 7003, 699, 19, 129, "Input"],
+Cell[251600, 7024, 702, 23, 133, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[252339, 7052, 3569, 101, 430, "Input"],
+Cell[255911, 7155, 990, 29, 118, "Output"],
+Cell[256904, 7186, 679, 20, 129, "Output"],
+Cell[257586, 7208, 1129, 32, 122, "Output"],
+Cell[258718, 7242, 1127, 32, 179, "Output"]
 }, Open  ]]
 }
 ]
